@@ -1,0 +1,18 @@
+{% block paragraph %}
+  <div{{ attributes }}>
+    {% block content %}
+
+        {% if uswds_grid_class %}
+        <div class="{{ uswds_grid_class }}">
+        {% endif %}
+
+          {{ content }}
+
+        {% if uswds_grid_class %}
+        </div>
+        {% endif %}
+
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

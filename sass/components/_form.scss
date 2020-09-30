@@ -1,0 +1,10 @@
+// Header search form
+#views-exposed-form-search-page-search {
+  .form--inline {
+    display: flex;
+    input#edit-search-keys {
+      margin-top: 0;
+      height: 2rem;
+    }
+  }
+}
