@@ -1,0 +1,14 @@
+{% block paragraph %}
+  <div{{ attributes }} style="background-image: url('{{ file_url(paragraph.field_uswds_image.entity.uri.value | image_style('hero_slider')) }}');">
+    {% block content %}
+
+      <div class="grid-container">
+        <div class="usa-hero__callout">
+          <h1 class="usa-hero__heading">{{ paragraph.field_uswds_title.value }}</h1>
+          {{ content|without('field_uswds_title') }}
+        </div>
+      </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

@@ -1,0 +1,7 @@
+oig_base:
+  version: VERSION
+  css:
+    theme:
+      css/styles.css: {}
+  js:
+    assets/js/uswds.min.js: {}

@@ -1,0 +1,52 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+//function oig_base_preprocess_page_title(&$variables) {
+//  $node = \Drupal::routeMatch()->getParameter('node');
+//  if ($node instanceof \Drupal\node\Entity\Node && $node->bundle() === 'report'
+//    && !$node->get('field_report_title')->isEmpty()) {
+//    $variables['title'] = $node->get('field_report_title')->value;
+//  }
+//}
+
+function oig_base_preprocess_input__email(&$variables) {
+  $variables['attributes']['class'][] = 'usa-input';
+}
+
+function oig_base_preprocess_input__tel(&$variables) {
+ $variables['attributes']['class'][] = 'usa-input';
+}
+
+function oig_base_preprocess_textarea(&$variables) {
+ $variables['attributes']['class'][] = 'usa-textarea';
+}
+
+/**
+ * Implements template_preprocess_form().
+ */
+function oig_base_preprocess_form(&$variables) {
+  if ($variables["attributes"]["id"] === "views-exposed-form-search-page-search") {
+    $variables['attributes']['class'] = 'usa-search usa-search--small';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function oig_base_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form["#id"] === "views-exposed-form-search-page-search") {
+    unset($form['keys']['#size']);
+    $form['keys']['#label_attributes']['class'][] = 'usa-sr-only';
+    // Add a unique ID for the search input.
+    $form['keys']['#attributes']['id'] = "edit-search-keys";
+    // Add add SR label and aria-label.
+    $form['actions']['submit']['#prefix'] = '<span class="usa-sr-only">Search</span>';
+    $form['actions']['submit']['#attributes']['aria-label'] = 'Submit Search';
+    // Unique ID for actions.
+    $form['actions']['#attributes']['id'] = "search-actions";
+    // Unique ID for search form submit.
+    $form['actions']['submit']['#id'] = 'search-form--submit';
+    $form['actions']['submit']['#value'] = '';
+  };
+}
