@@ -1,0 +1,6 @@
+{
+    "name": "uspsoig/oig-base",
+    "description": "Subtheme of USWDS Framework for OIG Template",
+    "type": "drupal-theme",
+    "require": {}
+}
