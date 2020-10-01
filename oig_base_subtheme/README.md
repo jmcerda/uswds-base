@@ -6,8 +6,19 @@
 2. Rename the directory to the name of your theme (eg, my_renamed_theme).
 3. Rename the oig_base_subtheme.info.yml.rename-me file to name-of-your-theme.info.yml (eg, my_renamed_theme.info.yml).
 4. Tweak that .info.yml file as needed, noting the instructions there for Sass workflow, if that is desired.
-5. Add uswds-gulp to your theme root using the latest directions from https://github.com/uswds/uswds-gulp
-6. Update the following variables with these values in the copied gulpfile:
+5. If you've never installed Gulp, you'll need to install the Gulp command line interface:
+
+       npm install gulp-cli -g
+
+6. Add all the required dependencies at once with following command from your project's root directory:
+
+       npm install autoprefixer gulp gulp-replace sass gulp-sass gulp-sourcemaps gulp-postcss postcss-csso uswds uswds-gulp@github:uswds/uswds-gulp --save-dev
+
+7. If you don't already have a project gulpfile, copy the gulpfile.js to your current directory (the project root):
+
+           cp node_modules/uswds-gulp/gulpfile.js .
+
+8. Update the following variables with these values in the copied gulpfile:
     - const PROJECT_SASS_SRC = "./sass";
     - const IMG_DEST = "./assets/img";
     - const FONTS_DEST = "./assets/fonts";
@@ -15,15 +26,7 @@
     - const CSS_DEST = "./css";
     - const SITE_CSS_DEST = "./css";
 
-7. If you've never installed Gulp, you'll need to install the Gulp command line interface:
-
-       npm install gulp-cli -g
-
-8. Add all the required dependencies at once with following command from your project's root directory:
-
-       npm install autoprefixer gulp gulp-replace sass gulp-sass gulp-sourcemaps gulp-postcss postcss-csso uswds uswds-gulp@github:uswds/uswds-gulp --save-dev
-
-9. Run Gulp to initialize the project, copy necessary assets, and compile your sass.
+9 Run Gulp to initialize the project, copy necessary assets, and compile your sass.
 
        gulp init
 
