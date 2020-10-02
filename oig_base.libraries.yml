@@ -2,6 +2,6 @@ oig_base:
   version: VERSION
   css:
     theme:
-      css/styles.css: {}
+      assets/css/styles.css: {}
   js:
-    js/uswds.min.js: {}
+    assets/js/uswds.min.js: {}
