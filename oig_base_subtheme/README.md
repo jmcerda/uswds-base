@@ -16,61 +16,13 @@ If you've never installed Gulp, you'll need to install the Gulp command line int
 npm install gulp-cli -g
 ```
 
-Add all the required dependencies at once with following command from your project's root directory:
+Install packages
 
 ```bash
-npm install autoprefixer gulp gulp-replace sass gulp-sass gulp-sourcemaps gulp-postcss postcss-csso uswds uswds-gulp@github:uswds/uswds-gulp --save-dev
+npm i
 ```
 
 ## Usage
-
-**If you don't already have a project gulpfile,** copy the `gulpfile.js` to your current directory (the project root):
-
-```bash
-cp node_modules/uswds-gulp/gulpfile.js .
-```
-
-OR
-
-**If you do already have a project gulpfile,** copy and rename the USWDS gulpfile (then you can manually add the contents of the USWDS gulpfile to your existing gulpfile and continue with the instructions):
-
-```bash
-cp node_modules/uswds-gulp/gulpfile.js gulpfile-uswds.js
-```
-
-We use autoprefixer for maximum browser compatibility. To ensure you're targeting the correct browsers we use a `.browserslistrc` file. **If you don't already have one** copy our file to your current directory (the project root):
-
-```bash
-cp node_modules/uswds-gulp/.browserslistrc .
-```
-
-OR
-
-If you already have a `.browserslistrc` make sure you're targeting the following browsers:
-
-```bash
-> 2%
-last 2 versions
-IE 11
-not dead
-```
-
----
-
-Open `gulpfile.js` in a text editor. In the `Paths` section, set the following constants with the proper paths. Don't use trailing slashes in the paths. All paths should be relative to the project root.
-
-    - const PROJECT_SASS_SRC = "./sass";
-    - const IMG_DEST = "./assets/img";
-    - const FONTS_DEST = "./assets/fonts";
-    - const JS_DEST = "./assets/js";
-    - const CSS_DEST = "./css";
-    - const SITE_CSS_DEST = "./css";
-
----
-
-Save `gulpfile.js` with these updated paths.
-
----
 
 Initialize your USWDS project. Initialization does the following:
 
@@ -86,9 +38,9 @@ gulp init
 
 ---
 
-Update the path for images in `_uswds-theme-general.scss` to be `../assets/img`
+Update the path for images in `_uswds-theme-general.scss` to be `../img`
 
-Update the path for fonts in `_uswds-theme-typography.scss` to be `../assets/fonts`
+Update the path for fonts in `_uswds-theme-typography.scss` to be `../fonts`
 
 Edit your USWDS settings in the new settings files and add custom Sass to the new `_uswds-theme-custom-styles.scss` file. Watch these files and compile any changes with
 
@@ -103,3 +55,4 @@ Continue normal theme development.
 Profit.
 
 :rocket:
+
