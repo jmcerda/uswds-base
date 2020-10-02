@@ -4,4 +4,4 @@ oig_base:
     theme:
       css/styles.css: {}
   js:
-    assets/js/uswds.min.js: {}
+    js/uswds.min.js: {}

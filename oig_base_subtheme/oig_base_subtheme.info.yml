@@ -9,9 +9,9 @@ libraries-override:
   oig_base/oig_base:
     css:
       theme:
-        assets/css/uswds.css: css/styles.css
+        css/uswds.css: css/styles.css
     js:
-      assets/js/uswds.min.js: assets/js/uswds.min.js
+      js/uswds.min.js: js/uswds.min.js
 
 # Add the CSS to CKEditor, so that custom entries in "Style" will work.
 ckeditor_stylesheets:
