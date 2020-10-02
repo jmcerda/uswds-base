@@ -38,13 +38,13 @@ PATHS
 const PROJECT_SASS_SRC = "./sass";
 
 // Images destination
-const IMG_DEST = "./assets/img";
+const IMG_DEST = "./img";
 
 // Fonts destination
-const FONTS_DEST = "./assets/fonts";
+const FONTS_DEST = "./fonts";
 
 // Javascript destination
-const JS_DEST = "./assets/js";
+const JS_DEST = "./js";
 
 // Compiled CSS destination
 const CSS_DEST = "./css";
