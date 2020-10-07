@@ -5,7 +5,7 @@
 
 # Composer artifact files
 vendor
-
+composer.lock
 # Node artifact files
 node_modules/
 dist/
