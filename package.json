@@ -12,5 +12,6 @@
     "sass": "^1.26.11",
     "uswds": "^2.9.0",
     "uswds-gulp": "github:uswds/uswds-gulp"
-  }
+  },
+  "dependencies": {}
 }
