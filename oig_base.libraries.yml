@@ -4,4 +4,8 @@ oig_base:
     theme:
       assets/css/styles.css: {}
   js:
+    /libraries/matchHeight.js: {}
+    /libraries/fitty.js: {}
     assets/js/uswds.min.js: {}
+    assets/js/custom.js: {}
+
