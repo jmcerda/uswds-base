@@ -2,5 +2,26 @@
     "name": "uspsoig/oig-base",
     "description": "Subtheme of USWDS Framework for OIG Template",
     "type": "drupal-theme",
-    "require": {}
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Jeremy Michael Cerda",
+            "role": "Web Architect"
+        }
+    ],
+    "require": {
+        "bower-asset/matchheight": "^0.7.2",
+        "npm-asset/fitty": "^2.3"
+    },
+    "require-dev": {},
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {},
+    "repositories": {
+        "asset-packagist": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    }
 }
