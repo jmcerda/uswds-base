@@ -1,5 +1,5 @@
 {% block paragraph %}
-  <div{{ attributes }} style="background-image: url('{{ file_url(paragraph.field_uswds_image.entity.uri.value | image_style('hero_slider')) }}');">
+  <div{{ attributes }} style="background-image: url('{{ file_url(paragraph.field_uswds_image.entity.uri.value | image_style('hero_image')) }}');">
     {% block content %}
 
       <div class="grid-container">
