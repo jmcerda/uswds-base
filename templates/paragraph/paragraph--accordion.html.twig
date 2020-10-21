@@ -1,0 +1,19 @@
+{% block paragraph %}
+  {% if uswds_grid_class %}
+  <div class="{{ uswds_grid_class }}">
+  {% endif %}
+
+    <div{{ attributes }}>
+      {% block content %}
+        <h2>{{ content.field_title }}</h2>
+
+          {{ content|without("field_title") }}
+
+      {% endblock %}
+    </div>
+
+  {% if uswds_grid_class %}
+  </div>
+  {% endif %}
+
+{% endblock paragraph %}
