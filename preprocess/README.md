@@ -1,12 +1,7 @@
 # Defining preprocess hooks
-Rather than placing your preprocess hooks directly in the .theme file you
-can manage them in automatically discovered and lazy-loaded include files. It is
-even possible to organize them in sub-folders. This feature greatly improves the
-maintainability of large themes that would otherwise contain hundreds of lines
-of unrelated code in your template.php file.
+Rather than placing your preprocess hooks directly in the .theme file you can manage them in automatically discovered and lazy-loaded include files. It is even possible to organize them in sub-folders. This feature greatly improves the maintainability of large themes that would otherwise contain hundreds of lines of unrelated code in your template.php file.
 
-The include files have to follow a certain naming pattern (HOOK.preprocess.inc)
-for them to be automatically discovered:
+The include files have to follow a certain naming pattern (HOOK.preprocess.inc) for them to be automatically discovered:
 
 * THEMENAME_preprocess_html() = html.preprocess.inc
 * THEMENAME_preprocess_page() = page.preprocess.inc
@@ -14,8 +9,7 @@ for them to be automatically discovered:
 * THEMENAME_preprocess_comment() = comment.preprocess.inc
 * THEMENAME_preprocess_region() = region.preprocess.inc
 
-As with template files, you should replace underscores from the hook names with
-hyphens:
+As with template files, you should replace underscores from the hook names with hyphens:
 
 * THEMENAME_preprocess_comment_wrapper() = comment-wrapper.preprocess.inc
 * THEMENAME_preprocess_html_tag() = html-tag.preprocess.inc
