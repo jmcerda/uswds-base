@@ -54,7 +54,7 @@ function oig_base_form_views_exposed_form_alter(&$form, FormStateInterface $form
 function oig_base_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   switch ($form_id) {
     case 'entity_browser_browse_content_form':
-      $classes = &$form['#attributes']['class'][0];
+      $classes = &$form['#attributes']['class']['0'];
       $classes = array_filter($classes , function($e){
         return $e != 'usa-form';
       });
