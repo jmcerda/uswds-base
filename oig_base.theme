@@ -50,3 +50,14 @@ function oig_base_form_views_exposed_form_alter(&$form, FormStateInterface $form
     $form['actions']['submit']['#value'] = '';
   };
 }
+
+function oig_base_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'entity-browser-browse-content-form':
+      $classes = &$form['actions']['item_name']['#attributes']['class'];
+      $classes = array_filter($classes , function($e){
+        return $e != 'usa-form';
+      });
+      break;
+  }
+}
