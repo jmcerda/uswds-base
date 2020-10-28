@@ -48,19 +48,19 @@ function oig_base_form_views_exposed_form_alter(&$form, FormStateInterface $form
     // Unique ID for search form submit.
     $form['actions']['submit']['#id'] = 'search-form--submit';
     $form['actions']['submit']['#value'] = '';
-  };
+  }
 }
 
-function oig_base_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function oig_base_form_alter(&$form, $form_id) {
   switch ($form_id) {
-    case 'entity_browser_form':
+    case 'entity_browser_browse_content_form':
       $classes = &$form['#attributes']['class'];
       $classes = array_filter($classes , function($e){
         return $e != 'usa-form';
       });
       break;
   }
-//  if ($form_id == 'entity_browser_browse_content_form') {
-//    dpm($form);
-//  }
+  if ($form_id == 'entity_browser_browse_content_form') {
+    dpm($form);
+  }
 }
