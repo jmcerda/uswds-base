@@ -60,7 +60,7 @@ function oig_base_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       });
       break;
   }
-//  if ($form_id == 'entity_browser_browse_content_form') {
-//    dpm($form);
-//  }
+  if ($form_id == 'entity_browser_browse_content_form') {
+    dpm($form);
+  }
 }
