@@ -4,14 +4,15 @@
 
       <div class="grid-container">
         <div class="usa-hero__callout">
-          <h1 class="usa-hero__heading">
-            <span class="usa-hero__heading--alt"> {{ paragraph.field_uswds_title.value }} </span> {{ paragraph.field_uswds_subtitle.value }}
+          <h1 class="usa-hero__heading usa-hero__heading--alt">
+            {{ paragraph.field_uswds_title.value }}
           </h1>
+          <h2 class="usa-hero__heading">
+            {{ paragraph.field_uswds_subtitle.value }}
+          </h2>
           {{ paragraph.field_uswds_body.value }}
-            {% if node.field_uswds_link.value %}
-              ...<a href="{{ paragraph.field_uswds_link..0['#url'] }}">{{ paragraph.field_uswds_link.0['#title'] }}</a>
-            {% endif %}
-          <a class="usa-button {{ paragraph.field_uswds_button_style.value }}" href="{{ paragraph.field_uswds_button.0['#url'] }}">{{ paragraph.field_uswds_button.0['#title'] }}</a>
+{#          <a href="{{ paragraph.field_uswds_link..0['#url'] }}">{{ paragraph.field_uswds_link.0['#title'] }}</a>#}
+{#          <a class="usa-button {{ paragraph.field_uswds_button_style.value }}" href="{{ paragraph.field_uswds_button.0['#url'] }}">{{ paragraph.field_uswds_button.0['#title'] }}</a>#}
         </div>
       </div>
 
