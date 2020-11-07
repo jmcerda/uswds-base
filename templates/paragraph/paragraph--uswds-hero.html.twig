@@ -9,7 +9,7 @@
             <span>{{ paragraph.field_uswds_subtitle.value }}</span>
           </h1>
           {{ paragraph.field_uswds_body.value | check_markup(paragraph.field_uswds_body.format) }}
-{#          <a href="{{ paragraph.field_uswds_link..0['#url'] }}">{{ paragraph.field_uswds_link.0['#title'] }}</a>#}
+          <a href="{{ paragraph.field_uswds_link.0.value.uri }}">{{ paragraph.field_uswds_link.0.value.title }}</a>
 
           <a class="usa-button {{ paragraph.field_uswds_button_style.value }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a>
         </div>
