@@ -10,7 +10,7 @@
           </h1>
           {{ content.field_uswds_body }}
           {% if paragraph.field_uswds_button.value %}
-            <div {{ attributes.addClass('margin-top-2') }}><a class="usa-button {{ paragraph.field_uswds_button_style.value }}{{ attributes }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
+            <div {{ attributes.addClass('margin-top-2') }}><a class="{{ attributes.addClass('usa-button {{ paragraph.field_uswds_button_style.value }}') }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
           {% endif %}
         </div>
       </div>
