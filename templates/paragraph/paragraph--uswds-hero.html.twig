@@ -9,7 +9,7 @@
             <span>{{ content.field_uswds_subtitle }}</span>
           </h1>
           {{ content.field_uswds_body }}
-          {% if content.field_uswds_button %}
+          {% if paragraph.field_uswds_button.value %}
             <div class="margin-top-2"><a class="usa-button {{ paragraph.field_uswds_button_style.value }}{{ attributes }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
           {% endif %}
         </div>
