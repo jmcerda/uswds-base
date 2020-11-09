@@ -9,7 +9,8 @@
             <span>{{ paragraph.field_uswds_subtitle.value }}</span>
           </h1>
           <span style="display:inline-block">{{ paragraph.field_uswds_body.value | check_markup(paragraph.field_uswds_body.format) }}</span>
-          <span style="display:inline-block">...<a href="{{ paragraph.field_uswds_link.0.value.uri }}">{{ paragraph.field_uswds_link.0.value.title }}</a></span>
+{#          <span style="display:inline-block">...<a href="{{ paragraph.field_uswds_link.0.value.uri }}">{{ paragraph.field_uswds_link.0.value.title }}</a></span>#}
+          <span style="display:inline-block">...{{ paragraph.field_uswds_link.value }}</span>
 
           <div><a class="usa-button {{ paragraph.field_uswds_button_style.value }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
         </div>
