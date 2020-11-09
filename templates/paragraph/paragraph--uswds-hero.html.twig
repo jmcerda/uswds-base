@@ -1,14 +1,14 @@
 {% block paragraph %}
-  <div{{ attributes }} style="background-image: url('{{ file_url(paragraph.field_uswds_image.entity.uri.value | image_style('hero_image')) }}');">
+  <div{{ attributes }} class="hero-slider-background" style="background-image: url('{{ file_url(paragraph.field_uswds_image.entity.uri.value | image_style('hero_image')) }}');">
     {% block content %}
 
       <div class="grid-container">
         <div class="usa-hero__callout">
           <h1 class="usa-hero__heading">
-            <span class="usa-hero__heading--alt">{{ paragraph.field_uswds_title.value }}</span>
-            <span>{{ paragraph.field_uswds_subtitle.value }}</span>
+            <span class="usa-hero__heading--alt">{{ paragraph.field_uswds_title }}</span>
+            <span>{{ paragraph.field_uswds_subtitle }}</span>
           </h1>
-          <span {{ paragraph.field_uswds_body.value | check_markup(paragraph.field_uswds_body.format) }}</span>
+          <span {{ paragraph.field_uswds_body }}</span>
 
           <div><a class="usa-button {{ paragraph.field_uswds_button_style.value }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
         </div>
