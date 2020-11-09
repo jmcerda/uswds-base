@@ -9,9 +9,8 @@
             <span>{{ content.field_uswds_subtitle }}</span>
           </h1>
           {{ content.field_uswds_body }}
-
           {% if content.field_uswds_button %}
-          <div class="margin-top-2"><a class="usa-button {{ paragraph.field_uswds_button_style.value }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
+            <div class="margin-top-2"><a class="usa-button {{ paragraph.field_uswds_button_style.value }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
           {% endif %}
         </div>
       </div>
