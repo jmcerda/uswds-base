@@ -1,5 +1,5 @@
 {% block paragraph %}
-  <div{{ attributes }} class="hero-slider-background" style="background-image: url('{{ file_url(paragraph.field_uswds_image.entity.uri.value | image_style('hero_image')) }}');">
+  <div{{ attributes.addClass('hero-slider-background') }} style="background-image: url('{{ file_url(paragraph.field_uswds_image.entity.uri.value | image_style('hero_image')) }}');">
     {% block content %}
 
       <div class="grid-container">
@@ -16,7 +16,7 @@
               paragraph.field_uswds_button_style.value|clean_class,
               ]
             %}
-            <div{{ attributes.addClass('margin-top-2') }}><a {{ attributes.addClass(classes) }} href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
+            <div{{ attributes.addClass('margin-top-2') }}><a{{ attributes.addClass(classes) }} href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
           {% endif %}
         </div>
       </div>
