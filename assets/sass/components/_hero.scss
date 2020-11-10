@@ -1,9 +1,11 @@
 .usa-hero {
   background-image: none;
+  padding-bottom: 0;
   .slick__slide {
     height: 400px;
     .hero-slider-background {
       background-size: cover;
+      height: 100%;
       .grid-container {
         padding-top: 2rem;
         padding-bottom: 2rem;
