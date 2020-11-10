@@ -1,4 +1,9 @@
 .usa-hero {
   background-image: none;
-  min-height: 300px;
+  .hero-slider-background {
+    .grid-container {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
 }
