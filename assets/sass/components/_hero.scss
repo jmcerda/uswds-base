@@ -1,9 +1,14 @@
 .usa-hero {
   background-image: none;
-  .hero-slider-background {
-    .grid-container {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+  .slick__slide {
+    height: 350px;
+    .hero-slider-background {
+      background-size: cover;
+      height: 350px;
+      .grid-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
     }
   }
 }
