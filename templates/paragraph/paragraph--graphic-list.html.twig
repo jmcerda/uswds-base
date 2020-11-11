@@ -1,6 +1,6 @@
 {% block paragraph %}
   <div{{ attributes }}>
-    {% if content.field_edge_to_edge %}
+    {% if paragraph.field_edge_to_edge.value %}
       {{ attributes.addClass('full-width-container') }}
     {% endif %}
     {% block content %}
