@@ -1,0 +1,11 @@
+{% block paragraph %}
+  <div{{ attributes }}>
+    {% block content %}
+      {{ content.field_image }}
+      <div class="usa-media-block__body">
+        <h3 class="usa-graphic-list__heading">{{ paragraph.field_title.value }}</h3>
+        {{ content|without('field_image', 'field_title') }}
+      </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
