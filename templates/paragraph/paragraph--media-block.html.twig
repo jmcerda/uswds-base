@@ -1,21 +1,19 @@
 {% block paragraph %}
-  <div class="usa-graphic-list__row grid-row grid-gap">
-    {%
-      set classes = [
-      'usa-media-block',
-      'tablet:grid-col',
-    ]
-    %}
-    <div{{ attributes.addClass(classes) }}>
-      {% block content %}
-        <img class="usa-media-block__img"  src="themes/contrib/oig_base/assets/img/circle-124.png" alt="Alt text">
-  {#        {{ content.field_image }}#}
-        <div class="usa-media-block__body">
-          <h2 class="usa-graphic-list__heading">{{ paragraph.field_title.value }}</h2>
-          {{ content|without('field_image', 'field_title') }}
-        </div>
-      {% endblock %}
-    </div>
+  {%
+    set classes = [
+    'usa-media-block',
+    'tablet:grid-col',
+  ]
+  %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+      <img class="usa-media-block__img"  src="themes/contrib/oig_base/assets/img/circle-124.png" alt="Alt text">
+{#        {{ content.field_image }}#}
+      <div class="usa-media-block__body">
+        <h2 class="usa-graphic-list__heading">{{ paragraph.field_title.value }}</h2>
+        {{ content|without('field_image', 'field_title') }}
+      </div>
+    {% endblock %}
   </div>
 {% endblock paragraph %}
 
