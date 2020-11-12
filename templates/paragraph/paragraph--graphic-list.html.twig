@@ -9,7 +9,7 @@
       ]
     %}
     {%
-      set background_style = paragraph.field_background_color.0.value.color ? "background-color:" ~ {{ paragraph.field_background_color.0.value.color }} : ""
+      set background_style = paragraph.field_background_color.0.value.color ? "background-color:" ~ paragraph.field_background_color.0.value.color : ""
     %}
     {% block content %}
       <section {{ attributes.addClass(classes) }} style="{{ background_style }}">
