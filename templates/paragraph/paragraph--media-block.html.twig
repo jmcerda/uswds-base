@@ -8,8 +8,7 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
 {#      <img class="usa-media-block__img"  src="themes/contrib/oig_base/assets/img/circle-124.png" alt="Alt text">#}
-    {% set blah = content.field_image.attributes.addClass('usa-media-block__img') %}
-      {{ content.field_image }}
+        {{ content.field_image }}
       <div class="usa-media-block__body">
         <h2 class="usa-graphic-list__heading">{{ paragraph.field_title.value }}</h2>
         {{ content|without('field_image', 'field_title') }}
@@ -19,10 +18,5 @@
 {% endblock paragraph %}
 
 
-{#{% for content in paragraph|batch(2) %}#}
-{#  <div class="usa-graphic-list__row grid-row grid-gap">#}
-{#    {% for key,value in paragraph.field_media_blocks.value %}#}
-{#      {{ content.field_media_blocks[key] }}#}
-{#    {% endfor %}#}
-{#  </div>#}
-{#{% endfor %}#}
+{#{% set blah = content.field_image.attributes.addClass('usa-media-block__img') %}#}
+{#      {{ content.field_image }}#}
