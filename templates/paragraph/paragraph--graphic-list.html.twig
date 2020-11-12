@@ -1,7 +1,7 @@
 {% block paragraph %}
   <div{{ attributes }}>
     {% if paragraph.field_edge_to_edge.value %}
-      <div {{ attributes.addClass('full-width-container') }} style="background-color:{{ content.field_background_color.0 }}">
+      <div {{ attributes.addClass('full-width-container') }} style="background-color:{{ content.field_background_color.0 }};">
     {% endif %}
         {% block content %}
           <div class="grid-container">
