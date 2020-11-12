@@ -1,6 +1,5 @@
 {% block paragraph %}
   <div class="usa-graphic-list__row grid-row grid-gap">
-    {% for content in paragraph|batch(2) %}
     {%
       set classes = [
       'usa-media-block',
@@ -17,9 +16,14 @@
         </div>
       {% endblock %}
     </div>
-    {% endfor %}
   </div>
 {% endblock paragraph %}
 
 
-
+{#{% for content in paragraph|batch(2) %}#}
+{#  <div class="usa-graphic-list__row grid-row grid-gap">#}
+{#    {% for key,value in paragraph.field_media_blocks.value %}#}
+{#      {{ content.field_media_blocks[key] }}#}
+{#    {% endfor %}#}
+{#  </div>#}
+{#{% endfor %}#}
