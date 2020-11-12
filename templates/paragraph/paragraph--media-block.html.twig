@@ -1,4 +1,4 @@
-{% block paragraph %}
+{% block paragraph|batch(2) %}
   <div class="usa-graphic-list__row grid-row grid-gap">
     {%
       set classes = [
