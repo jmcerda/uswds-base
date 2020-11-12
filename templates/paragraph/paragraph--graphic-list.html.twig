@@ -1,25 +1,28 @@
 {% block paragraph %}
   <div{{ attributes }}>
-    {% if paragraph.field_edge_to_edge.value %}
-      <div {{ attributes.addClass('full-width-container') }} style="background-color:{{ paragraph.field_background_color.0.value.color }};">
-    {% endif %}
-        {% block content %}
-          <section class="usa-graphic-list usa-section usa-section--dark">
-            <div class="grid-container">
-              <h2>{{ content.field_title }}</h2>
-                {% for row in paragraph.field_media_blocks.value|batch(2) %}
-                <div class="usa-graphic-list__row grid-row grid-gap">
-                  {% for key,value in row %}
-                  {{ content.field_media_blocks[key] }}
-                  {% endfor %}
-                </div>
-                {% endfor %}
-            </div>
-          </section>
-        {% endblock %}
-    {% if paragraph.field_edge_to_edge.value %}
-      </div>
-    {% endif %}
+    {%
+      set classes = [
+      'usa-graphic-list',
+      'usa-section',
+      paragraph.field_backround_style.value=='light' ? 'usa-section--light':'usa-section--dark',
+      paragraph.field_edge_to_edge.value ? 'full-width-container'
+      ]
+      set background_style = paragraph.field_background_color.0.value.color ? "background-color:" ~ {{ paragraph.field_background_color.0.value.color }} : ""
+    %}
+    {% block content %}
+      <section {{ attributes.addClass(classes) }} style="{{ background_style }}">
+        <div class="grid-container">
+          <h2>{{ content.field_title }}</h2>
+          {% for row in paragraph.field_media_blocks.value|batch(2) %}
+          <div class="usa-graphic-list__row grid-row grid-gap">
+            {% for key,value in row %}
+            {{ content.field_media_blocks[key] }}
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    {% endblock %}
   </div>
 {% endblock paragraph %}
 
