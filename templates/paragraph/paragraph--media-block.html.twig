@@ -1,10 +1,12 @@
 {% block paragraph %}
   <div{{ attributes }}>
     {% block content %}
-      {{ content.field_image }}
-      <div class="usa-media-block__body">
-        <h3 class="usa-graphic-list__heading">{{ paragraph.field_title.value }}</h3>
-        {{ content|without('field_image', 'field_title') }}
+      <div class="usa-media-block tablet:grid-col">
+        <img class="usa-media-block__img"  src="/assets/img/circle-124.png" alt="Alt text">
+{#        {{ content.field_image }}#}
+        <div class="usa-media-block__body">
+          <h2 class="usa-graphic-list__heading">{{ paragraph.field_title.value }}</h2>
+          {{ content|without('field_image', 'field_title') }}
       </div>
     {% endblock %}
   </div>
