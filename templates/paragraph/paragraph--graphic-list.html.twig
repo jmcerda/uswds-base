@@ -7,6 +7,8 @@
       paragraph.field_backround_style.value=='light' ? 'usa-section--light':'usa-section--dark',
       paragraph.field_edge_to_edge.value ? 'full-width-container'
       ]
+    %}
+    {%
       set background_style = paragraph.field_background_color.0.value.color ? "background-color:" ~ {{ paragraph.field_background_color.0.value.color }} : ""
     %}
     {% block content %}
