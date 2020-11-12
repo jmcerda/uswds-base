@@ -1,5 +1,8 @@
 {% block paragraph %}
-  <div{{ attributes }} {% if paragraph.field_edge_to_edge.value %} {{ attributes.addClass('full-width-container') }} {% endif %}>
+  <div{{ attributes }}>
+    {% if paragraph.field_edge_to_edge.value %}
+      <div {{ attributes.addClass('full-width-container') }}>TEST DIV</div>
+    {% endif %}
     {% block content %}
       <div class="grid-container" {% if content.field_background_color %} style="background-color:{{ field_background_color }}" {% endif %}>
         <div class="grid-row grid-gap">
