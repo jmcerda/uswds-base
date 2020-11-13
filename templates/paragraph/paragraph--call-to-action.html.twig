@@ -1,0 +1,42 @@
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {%
+      set classes = [
+      'usa-section',
+      paragraph.field_backround_style.value=='light' ? 'usa-section--light':'usa-section--dark',
+      paragraph.field_edge_to_edge.value ? 'full-width-container'
+    ]
+    %}
+    {%
+      set background_style = paragraph.field_background_color.0.value.color ? "background-color:" ~ paragraph.field_background_color.0.value.color : ""
+    %}
+    {% block content %}
+
+      {% if uswds_grid_class %}
+      <div class="{{ uswds_grid_class }}">
+      {% endif %}
+
+      <section {{ attributes.addClass(classes) }} style="{{ background_style }} background-image: url('{{ file_url(paragraph.field_image.entity.field_media_image.entity.fileuri | image_style('hero_image')) }}');" alt="{{ paragraph.field_image.entity.field_media_image.alt }}" >
+        <div class="grid-container">
+          <h2 class="font-heading-xl margin-y-0">{{ content.field_uswds_title }}</h2>
+          <div class="usa-intro">{{ content.field_uswds_body }}</div>
+          {% if paragraph.field_uswds_button.value %}
+            {%
+              set classes = [
+              'usa-button',
+              paragraph.field_uswds_button_style.value|clean_class,
+            ]
+            %}
+            <div{{ attributes.addClass('margin-top-2') }}><a{{ attributes.addClass(classes) }} href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
+          {% endif %}
+        </div>
+      </section>
+
+      {% if uswds_grid_class %}
+      </div>
+      {% endif %}
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
