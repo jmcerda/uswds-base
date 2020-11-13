@@ -12,8 +12,8 @@
 {#      set background_style = paragraph.field_background_color.0.value.color ? "background-color:" ~ paragraph.field_background_color.0.value.color : ""#}
 {#    %}#}
     {% block content %}
-{#      <section {{ attributes.addClass(classes) }}">#}
-      <section {{ attributes.addClass(classes) }} style="{{ background_style }}">
+{#      <section {{ attributes.addClass(classes) }} style="{{ background_style }}">#}
+      <section {{ attributes.addClass(classes) }}>
         <div class="grid-container">
           <h2>{{ content.field_title }}</h2>
           {% for row in paragraph.field_media_blocks.value|batch(2) %}
@@ -28,5 +28,3 @@
     {% endblock %}
   </div>
 {% endblock paragraph %}
-
-
