@@ -7,7 +7,7 @@
   %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ dpm() }}
+{#      {{ dpm() }}#}
       <img class="usa-media-block__img"  src="{{ file_url(paragraph.field_image.entity.uri.value) }}" alt="{{ paragraph.field_image.entity.alt.value }}">
       <div class="tmp">{{ content.field_image }}</div>
       <div class="usa-media-block__body">
