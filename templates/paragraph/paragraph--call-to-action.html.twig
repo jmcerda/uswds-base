@@ -20,7 +20,7 @@
       <div class="{{ uswds_grid_class }}">
       {% endif %}
 
-      <section {{ attributes.addClass(section_classes) }} style="{{ background_style }}">
+      <section class="{{ section_classes | join(" ") }}" style="{{ background_style }}">
         <div class="grid-container">
           <h2 class="font-heading-xl margin-y-5">{{ content.field_uswds_title }}</h2>
           <div class="usa-intro">{{ content.field_uswds_body }}</div>
@@ -31,7 +31,7 @@
               paragraph.field_uswds_button_style.value|clean_class,
             ]
             %}
-            <div{{ attributes.addClass('margin-top-2') }}><a{{ attributes.addClass(button_classes) }} href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
+            <div class="margin-top-2"><a{{ button_classes | join(" ") }} href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
           {% endif %}
         </div>
       </section>
