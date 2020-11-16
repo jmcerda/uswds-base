@@ -16,26 +16,20 @@
 
     {% block content %}
 
-      <section class="{{ section_classes | join(" ") }}" style="{{ background_style }}">
-        {% if uswds_grid_class %}
-        <div class="{{ uswds_grid_class }}">
-        {% endif %}
-          <div class="grid-container">
-            <h2 class="font-heading-xl margin-y-5">{{ content.field_uswds_title }}</h2>
-            <div class="usa-intro">{{ content.field_uswds_body }}</div>
-            {% if paragraph.field_uswds_button.value %}
-              {%
-                set button_classes = [
-                'usa-button',
-                paragraph.field_uswds_button_style.value|clean_class,
-              ]
-              %}
-              <div class="margin-top-2"><a{{ button_classes | join(" ") }} href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
-            {% endif %}
-          </div>
-        {% if uswds_grid_class %}
+      <section class="{{ section_classes | join(' ') }}" style="{{ background_style }}">
+        <div class="grid-container">
+          <h2 class="font-heading-xl margin-y-5">{{ content.field_uswds_title }}</h2>
+          <div class="usa-intro">{{ content.field_uswds_body }}</div>
+          {% if paragraph.field_uswds_button.value %}
+            {%
+              set button_classes = [
+              'usa-button',
+              paragraph.field_uswds_button_style.value|clean_class,
+            ]
+            %}
+            <div class="margin-top-2"><a class="{{ button_classes | join(' ') }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
+          {% endif %}
         </div>
-        {% endif %}
       </section>
 
     {% endblock %}
