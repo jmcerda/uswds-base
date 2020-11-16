@@ -1,7 +1,7 @@
 {%
   set section_classes = [
   'usa-section',
-  paragraph.field_backround_style.value=='light' ? 'usa-section--light':'usa-section--dark',
+  paragraph.field_backround_style.value=='light':'dark' ? 'usa-section--light':'usa-section--dark',
   paragraph.field_edge_to_edge.value ? 'full-width-container'
 ]
 %}
@@ -16,7 +16,7 @@
 
     {% block content %}
 
-      <section class="{{ section_classes | join(' ') }}" style="{{ background_style }}">
+      <section class="{{ section_classes | join(' ') }}" style="{{ background_style }};">
         <div class="grid-container">
           <h2 class="font-heading-xl margin-y-5">{{ content.field_uswds_title }}</h2>
           <div class="usa-intro">{{ content.field_uswds_body }}</div>
