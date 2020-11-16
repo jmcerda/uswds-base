@@ -12,23 +12,26 @@
     %}
     {% if paragraph.field_image.entity.field_media_image.entity.fileuri %}
       {% set background_style = background_style ~ " background-image: url('" ~ file_url(paragraph.field_image.entity.field_media_image.entity.fileuri | image_style('section_background_image')) ~ "');"%}
+      {% set img_background = 'img-background' %}
     {% endif %}
 
     {% block content %}
 
       <section class="{{ section_classes | join(' ') }}" style="{{ background_style }};">
         <div class="grid-container">
-          <h2 class="font-heading-xl margin-y-5">{{ content.field_uswds_title }}</h2>
-          <div class="usa-intro">{{ content.field_uswds_body }}</div>
-          {% if paragraph.field_uswds_button.value %}
-            {%
-              set button_classes = [
-              'usa-button',
-              paragraph.field_uswds_button_style.value|clean_class,
-            ]
-            %}
-            <div class="margin-top-2"><a class="{{ button_classes | join(' ') }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
-          {% endif %}
+          <div class="cta-content {{ img_background }}">
+            <h2 class="font-heading-xl margin-y-5">{{ content.field_uswds_title }}</h2>
+            <div class="usa-intro">{{ content.field_uswds_body }}</div>
+            {% if paragraph.field_uswds_button.value %}
+              {%
+                set button_classes = [
+                'usa-button',
+                paragraph.field_uswds_button_style.value|clean_class,
+              ]
+              %}
+              <div class="margin-top-2"><a class="{{ button_classes | join(' ') }}" href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
+            {% endif %}
+          </div>
         </div>
       </section>
 
