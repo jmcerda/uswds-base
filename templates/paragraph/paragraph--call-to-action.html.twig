@@ -3,11 +3,7 @@
   'usa-section',
   'call-to-action',
   paragraph.field_backround_style.value=='light' ? 'usa-section--light':'usa-section--dark',
-  paragraph.field_edge_to_edge.value ? 'full-width-container',
-  {% if paragraph.field_image.entity.field_media_image.entity.fileuri %}
-    {% set img_background = 'img-background' %}
-  {% endif %}
-  img_background
+  paragraph.field_edge_to_edge.value ? 'full-width-container'
 ]
 %}
 {% block paragraph %}
@@ -17,11 +13,12 @@
     %}
     {% if paragraph.field_image.entity.field_media_image.entity.fileuri %}
       {% set background_style = background_style ~ " background-image: url('" ~ file_url(paragraph.field_image.entity.field_media_image.entity.fileuri | image_style('section_background_image')) ~ "');"%}
+      {% set img_background = 'img-background' %}
     {% endif %}
 
     {% block content %}
 
-      <section class="{{ section_classes | join(' ') }}" style="{{ background_style }};">
+      <section class="{{ section_classes | join(' ') }} img_background" style="{{ background_style }};">
         <div class="grid-container">
           <div class="cta-content">
             <h2 class="font-heading-xl margin-y-5">{{ content.field_uswds_title }}</h2>
