@@ -1,6 +1,28 @@
-.cta-content.img-background {
-  background-color: white;
-  opacity: 70%;
-  padding: 2em;
-  border-radius: 20px;
+.call-to-action {
+  .cta-content.img-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-color: white;
+    opacity: 70%;
+    padding: 2em;
+    border-radius: 20px;
+  }
+}
+
+
+
+.usa-hero {
+  background-image: none;
+  padding-bottom: 0;
+  .slick__slide {
+    height: 400px;
+    .hero-slider-background {
+
+      .grid-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+    }
+  }
 }
