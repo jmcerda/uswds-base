@@ -1,23 +1,26 @@
-
+{%
+  set section_classes = [
+  'usa-section',
+  paragraph.field_backround_style.value=='light' ? 'usa-section--light':'usa-section--dark',
+  paragraph.field_edge_to_edge.value ? 'full-width-container'
+]
+%}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
-    {%
-      set section_classes = [
-      'usa-section',
-      paragraph.field_backround_style.value=='light' ? 'usa-section--light':'usa-section--dark',
-      paragraph.field_edge_to_edge.value ? 'full-width-container'
-    ]
-    %}
+  <div{{ attributes }}>
     {%
       set background_style = paragraph.field_background_color.0.value.color ? "background-color:" ~ paragraph.field_background_color.0.value.color : ""
     %}
+    {% if paragraph.field_image.entity.field_media_image.entity.fileuri %}
+      {% set background_style = background_style ~ " background-image: url('" ~ file_url(paragraph.field_image.entity.field_media_image.entity.fileuri | image_style('section_background_image')) ~ "');"%}
+    {% endif %}
+
     {% block content %}
 
       {% if uswds_grid_class %}
       <div class="{{ uswds_grid_class }}">
       {% endif %}
 
-      <section {{ attributes.addClass(section_classes) }} style="{{ background_style }} background-image: url('{{ file_url(paragraph.field_image.entity.field_media_image.entity.fileuri | image_style('section_background_image')) }}');" alt="{{ paragraph.field_image.entity.field_media_image.alt }}" >
+      <section {{ attributes.addClass(section_classes) }} style="{{ background_style }}">
         <div class="grid-container">
           <h2 class="font-heading-xl margin-y-5">{{ content.field_uswds_title }}</h2>
           <div class="usa-intro">{{ content.field_uswds_body }}</div>
