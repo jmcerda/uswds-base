@@ -5,6 +5,7 @@
     height: 400px;
     .hero-slider-background {
       background-size: cover;
+      background-repeat: no-repeat;
       height: 100%;
       .grid-container {
         padding-top: 2rem;
