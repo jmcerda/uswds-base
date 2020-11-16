@@ -1,4 +1,8 @@
 .call-to-action {
+  &.img-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .cta-content.content-background {
     background-color: white;
     opacity: 70%;
