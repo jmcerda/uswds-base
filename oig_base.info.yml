@@ -4,7 +4,7 @@ description: 'A subtheme of USWDS for OIG Template.'
 core: 8.x
 base theme: uswds
 dependencies:
-  - drupal:twig_tweak
+  - twig_tweak:twig_tweak
   - oig_base_library:oig_base_library
 
 libraries:
