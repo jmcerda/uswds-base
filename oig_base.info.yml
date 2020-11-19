@@ -3,8 +3,6 @@ type: theme
 description: 'A subtheme of USWDS for OIG Template.'
 core: 8.x
 base theme: uswds
-dependencies:
-  - oig_base_library:oig_base_library
 
 libraries:
   - oig_base/oig_base
