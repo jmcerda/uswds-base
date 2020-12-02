@@ -2,8 +2,7 @@
 // ---------------------------------
 
 .usa-nav__submenu {
-  display: none;
-  &:active {
-    display: block;
+  &[aria-expanded="false"] {
+    display: none;
   }
 }
