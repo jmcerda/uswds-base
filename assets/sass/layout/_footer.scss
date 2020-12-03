@@ -8,12 +8,12 @@ footer {
           ::after {
             content: '  |  ';
           }
-          :last-child::after {
-            content: '';
-          }
           a {
             text-decoration: none;
           }
+        }
+        li:last-child::after {
+          content: '';
         }
       }
     }
