@@ -1,3 +1,22 @@
+footer {
+  .usa-footer__secondary-section {
+    nav {
+      ul {
+        list-style-type: none;
+        li {
+          display: inline-flex;
+          text-decoration: none;
+          :after {
+            content: " | ";
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// DOJ Styles for later
 //.usa-footer__contact-heading {
 //  @include at-media("tablet") {
 //    padding-right: 1rem;
