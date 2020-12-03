@@ -7,7 +7,7 @@ footer {
           display: inline-flex;
           :after {
             content: "  |  ";
-            :last-child {
+            :last-of-type {
               content: none;
             }
           }
