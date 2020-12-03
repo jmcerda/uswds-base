@@ -6,10 +6,10 @@ footer {
         li {
           display: inline-flex;
           :after {
-            content: " | ";
-          }
-          :last-child:after {
-            content: " ";
+            content: "  |  ";
+            :last-child {
+              content: none;
+            }
           }
           a {
             text-decoration: none;
