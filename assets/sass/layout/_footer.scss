@@ -5,9 +5,14 @@ footer {
         list-style-type: none;
         li {
           display: inline-flex;
-          text-decoration: none;
           :after {
             content: " | ";
+          }
+          :last-child:after {
+            content: " ";
+          }
+          a {
+            text-decoration: none;
           }
         }
       }
