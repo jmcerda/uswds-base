@@ -164,7 +164,7 @@
                 <img class="usa-footer__logo-img" src="{{ footer_agency_logo }}" alt="{{ 'Agency logo'|t }}">
             </div>
               <div class="mobile-lg:grid-col-auto">
-                <h3 class="usa-footer__logo-heading">{{ footer_agency_name }}</h3>
+                <h3 class="usa-footer__logo-heading">{{ footer_agency_name|raw }}</h3>
               </div>
             </div>
             {% if not footer_slim %}
@@ -200,7 +200,7 @@
                   {% endif %}
                 </div>
 
-                <h3 class="usa-footer__contact-heading">{{ contact_center }}</h3>
+                <h3 class="usa-footer__contact-heading">{{ contact_center|raw }}</h3>
                 <address class="usa-footer__address">
                   <div class="usa-footer__contact-info grid-row grid-gap">
                     <div class="grid-col-auto">
