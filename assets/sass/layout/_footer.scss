@@ -7,9 +7,9 @@ footer {
           display: inline-flex;
           :after {
             content: "  |  ";
-            :last-of-type {
-              content: none;
-            }
+          }
+          :last-of-type:after {
+            content: none;
           }
           a {
             text-decoration: none;
