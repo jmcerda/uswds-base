@@ -5,11 +5,11 @@ footer {
         list-style-type: none;
         li {
           display: inline-flex;
-          :after {
-            content: "  |  ";
-            &last-of-type {
-              content: none;
-            }
+          ::after {
+            content: '  |  ';
+          }
+          :last-child::after {
+            content: '';
           }
           a {
             text-decoration: none;
