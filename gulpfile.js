@@ -35,7 +35,7 @@ PATHS
 */
 
 // Project Sass source directory
-const PROJECT_SASS_SRC = "./assets/sass";
+const PROJECT_SASS_SRC = "./assets/scss";
 
 // Images destination
 const IMG_DEST = "./assets/img";
