@@ -2,9 +2,9 @@ section.usa-hero {
   background-image: none;
   padding-top: 0;
   padding-bottom: 0;
-  //.field--label-hidden {
-  //  display: none;
-  //}
+  .field--name-label.field--label-hidden {
+    display: none;
+  }
   .slick__slide {
     height: 400px;
     .hero-slider-background {
