@@ -1,0 +1,38 @@
+#logo.usa-logo {
+  @include at-media("tablet") {
+    display: flex;
+    #brand-text {
+      line-height: 1;
+      margin-left: 20px;
+      align-self: center;
+      .slogan_text {
+        font-size: 1.5rem;
+      }
+    }
+
+  }
+}
+
+// Header
+// ---------------------------------
+
+.usa-header {
+  + .usa-hero {
+    @include at-media($theme-header-min-width) {
+      border-top: units(1px) solid color("base-lighter");
+    }
+  }
+}
+
+// usa-header--extended
+// ---------------------------------
+
+.usa-header--extended {
+  .usa-nav {
+    @include at-media($theme-header-min-width) {
+      border-top: units(1px) solid color("base-lighter");
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
