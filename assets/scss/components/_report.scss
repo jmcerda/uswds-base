@@ -3,7 +3,7 @@
 }
 .report-field-container.grid-container {
   border: 1px solid color('base-lighter');
-  @include u-radius('md');
+  @include u-radius('lg');
   overflow: hidden;
   padding: 0;
   .grid-row {
