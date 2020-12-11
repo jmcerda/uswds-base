@@ -1,0 +1,30 @@
+.report-field-items {
+  margin-bottom: 2em;
+}
+.report-field-container.grid-container {
+  border: 1px solid $theme-color-base;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  .report-field-label {
+    background-color: $theme-color-primary;
+    color: $theme-color-base-light;
+    text-align: center;
+    padding-right: 1em;
+    @include at-media("mobile-lg") {
+      text-align: right;
+    }
+  }
+  .field__label {
+    margin: 1em 0;
+  }
+  .doj-field-item {
+    margin: 1em 0;
+    text-align: center;
+    @include at-media("mobile-lg") {
+      padding-left: 1em;
+      text-align: left;
+    }
+  }
+}
