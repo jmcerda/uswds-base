@@ -17,9 +17,9 @@
     }
   }
   .field__label {
-    margin: 1em 0;
+    padding: 1em;
   }
-  .doj-field-item {
+  .report-field-item {
     margin: 1em 0;
     text-align: center;
     @include at-media("mobile-lg") {
