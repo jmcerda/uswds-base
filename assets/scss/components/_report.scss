@@ -2,22 +2,22 @@
   margin-bottom: 2em;
 }
 .report-field-container.grid-container {
-  border: 1px solid color("base-lighter");
-  @include u-radius($theme-card-border-radius);
+  border: 1px solid color('base-lighter');
+  @include u-radius('md');
   overflow: hidden;
   padding: 0;
   .grid-row {
-    border-bottom: 1px solid color("base-lighter");
+    border-bottom: 1px solid color('base-lighter');
     &:last-child {
       border-bottom: none;
     }
     .report-field-label {
       background-color: color('primary');
-      color: color("base-lighter");
+      color: color('base-lighter');
       text-align: center;
       align-items: center;
       padding-right: 1em;
-      @include at-media("mobile-lg") {
+      @include at-media('mobile-lg') {
         text-align: right;
       }
     }
@@ -25,13 +25,13 @@
       padding: 1em;
     }
     .report-field-item {
-      color: color("base-darker");
+      color: color('base-darker');
       display: inline-flex;
       align-items: center;
       padding-left: 1em;
       text-align: center;
-      border-left: 1px solid color("base-lighter");
-      @include at-media("mobile-lg") {
+      border-left: 1px solid color('base-lighter');
+      @include at-media('mobile-lg') {
         text-align: left;
       }
     }
