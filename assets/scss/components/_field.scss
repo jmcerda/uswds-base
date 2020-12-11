@@ -6,7 +6,7 @@
   padding: 0;
   .grid-row {
     border-bottom: 1px solid;
-    :last-child {
+    &:last-child {
       border-bottom: none;
     }
     .report-field-label {
