@@ -1,0 +1,36 @@
+.report-field-items {
+  margin-bottom: 2em;
+}
+.report-field-container.grid-container {
+  border: 1px solid;
+  padding: 0;
+  .grid-row {
+    border-bottom: 1px solid;
+    &:last-child {
+      border-bottom: none;
+    }
+    .report-field-label {
+      background-color: $theme-color-primary;
+      color: $theme-color-base-light;
+      text-align: center;
+      align-items: center;
+      padding-right: 1em;
+      @include at-media("mobile-lg") {
+        text-align: right;
+      }
+    }
+    .field__label {
+      padding: 1em;
+    }
+    .report-field-item {
+      display: inline-flex;
+      align-items: center;
+      padding-left: 1em;
+      text-align: center;
+      border-left: 1px solid;
+      @include at-media("mobile-lg") {
+        text-align: left;
+      }
+    }
+  }
+}
