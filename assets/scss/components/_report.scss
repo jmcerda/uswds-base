@@ -3,7 +3,8 @@
 }
 .report-field-container.grid-container {
   border: 1px solid color("base-lighter");
-  border-radius: .25em;
+  @include u-radius($theme-card-border-radius);
+  overflow: hidden;
   padding: 0;
   .grid-row {
     border-bottom: 1px solid color("base-lighter");
