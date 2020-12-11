@@ -13,6 +13,8 @@
       background-color: $theme-color-primary;
       color: $theme-color-base-light;
       text-align: center;
+      display: inline-flex;
+      align-items: center;
       padding-right: 1em;
       @include at-media("mobile-lg") {
         text-align: right;
@@ -22,10 +24,9 @@
       padding: 1em;
     }
     .report-field-item {
-      height: 100%;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      padding: 1em;
+      padding-left: 1em;
       text-align: center;
       border-left: 1px solid;
       @include at-media("mobile-lg") {
