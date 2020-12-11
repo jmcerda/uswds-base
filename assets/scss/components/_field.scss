@@ -20,10 +20,9 @@
     padding: 1em;
   }
   .report-field-item {
-    margin: 1em 0;
+    padding: 1em;
     text-align: center;
     @include at-media("mobile-lg") {
-      padding-left: 1em;
       text-align: left;
     }
   }
