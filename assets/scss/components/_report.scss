@@ -2,16 +2,16 @@
   margin-bottom: 2em;
 }
 .report-field-container.grid-container {
-  border: 1px solid;
+  border: 1px solid color("base-light");
   padding: 0;
   .grid-row {
-    border-bottom: 1px solid;
+    border-bottom: 1px solid color("base-light");
     &:last-child {
       border-bottom: none;
     }
     .report-field-label {
       background-color: color('primary');
-      color: $theme-color-base-light;
+      color: color("base-lighter");
       text-align: center;
       align-items: center;
       padding-right: 1em;
@@ -27,7 +27,7 @@
       align-items: center;
       padding-left: 1em;
       text-align: center;
-      border-left: 1px solid;
+      border-left: 1px solid color("base-light");
       @include at-media("mobile-lg") {
         text-align: left;
       }
