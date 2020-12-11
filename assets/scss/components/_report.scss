@@ -2,10 +2,10 @@
   margin-bottom: 2em;
 }
 .report-field-container.grid-container {
-  border: 1px solid color("base-light");
+  border: 1px solid color("base-lighter");
   padding: 0;
   .grid-row {
-    border-bottom: 1px solid color("base-light");
+    border-bottom: 1px solid color("base-lighter");
     &:last-child {
       border-bottom: none;
     }
@@ -27,7 +27,7 @@
       align-items: center;
       padding-left: 1em;
       text-align: center;
-      border-left: 1px solid color("base-light");
+      border-left: 1px solid color("base-lighter");
       @include at-media("mobile-lg") {
         text-align: left;
       }
