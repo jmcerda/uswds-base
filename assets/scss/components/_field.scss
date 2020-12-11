@@ -22,8 +22,12 @@
       padding: 1em;
     }
     .report-field-item {
+      height: 100%;
+      display: flex;
+      align-items: center;
       padding: 1em;
       text-align: center;
+      border-left: 1px solid;
       @include at-media("mobile-lg") {
         text-align: left;
       }
