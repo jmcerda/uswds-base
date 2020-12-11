@@ -3,12 +3,12 @@
 }
 .report-field-container.grid-container {
   border: 1px solid $theme-color-base;
-  padding-left: 0;
-  padding-right: 0;
-  margin-top: 0;
-  margin-bottom: 0;
+  padding: 0;
   .grid-row {
-    border: 1px solid gray;
+    border-bottom: 1px solid $theme-color-base;
+    :last-child {
+      border-bottom: none;
+    }
     .report-field-label {
       background-color: $theme-color-primary;
       color: $theme-color-base-light;
