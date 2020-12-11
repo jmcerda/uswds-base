@@ -7,23 +7,26 @@
   padding-right: 0;
   margin-top: 0;
   margin-bottom: 0;
-  .report-field-label {
-    background-color: $theme-color-primary;
-    color: $theme-color-base-light;
-    text-align: center;
-    padding-right: 1em;
-    @include at-media("mobile-lg") {
-      text-align: right;
+  .grid-row {
+    border: 1px solid gray;
+    .report-field-label {
+      background-color: $theme-color-primary;
+      color: $theme-color-base-light;
+      text-align: center;
+      padding-right: 1em;
+      @include at-media("mobile-lg") {
+        text-align: right;
+      }
     }
-  }
-  .field__label {
-    padding: 1em;
-  }
-  .report-field-item {
-    padding: 1em;
-    text-align: center;
-    @include at-media("mobile-lg") {
-      text-align: left;
+    .field__label {
+      padding: 1em;
+    }
+    .report-field-item {
+      padding: 1em;
+      text-align: center;
+      @include at-media("mobile-lg") {
+        text-align: left;
+      }
     }
   }
 }
