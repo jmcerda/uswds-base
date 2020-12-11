@@ -2,10 +2,10 @@
   margin-bottom: 2em;
 }
 .report-field-container.grid-container {
-  border: 1px solid $theme-color-base;
+  border: 1px solid;
   padding: 0;
   .grid-row {
-    border-bottom: 1px solid $theme-color-base;
+    border-bottom: 1px solid;
     :last-child {
       border-bottom: none;
     }
