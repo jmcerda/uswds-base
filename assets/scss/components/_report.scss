@@ -12,7 +12,7 @@
       border-bottom: none;
     }
     .report-field-label {
-      background-color: color('primary-light');
+      background-color: color('primary');
       color: color('base-lighter');
       text-align: center;
       align-items: center;
@@ -37,10 +37,10 @@
     }
     &:hover {
       .report-field-label {
-        background-color: color('primary');
+        background-color: color('primary-vivid');
       }
       .report-field-item {
-        background-color: color('base-light');
+        background-color: color('base-lighter');
       }
     }
   }
