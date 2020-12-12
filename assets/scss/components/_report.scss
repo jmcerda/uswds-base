@@ -12,7 +12,7 @@
       border-bottom: none;
     }
     .report-field-label {
-      background-color: color('primary');
+      background-color: color('primary-light');
       color: color('base-lighter');
       text-align: center;
       align-items: center;
@@ -33,6 +33,14 @@
       border-left: 1px solid color('base-lighter');
       @include at-media('mobile-lg') {
         text-align: left;
+      }
+    }
+    &:hover {
+      .report-field-label {
+        background-color: color('primary');
+      }
+      .report-field-item {
+        background-color: color('base-light');
       }
     }
   }
