@@ -1,3 +1,16 @@
+.usa-banner {
+  header.usa-banner__header {
+    button.usa-banner__button {
+      &[aria-expanded="false"] {
+        + #gov-banner {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+
 #logo.usa-logo {
   @include at-media("tablet") {
     display: flex;
