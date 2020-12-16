@@ -1,11 +1,7 @@
 .usa-banner {
   header.usa-banner__header {
-    button.usa-banner__button {
-      &[aria-expanded="false"] {
-        + #gov-banner {
-          display: none;
-        }
-      }
+    #gov-banner {
+      display: none;
     }
   }
 }

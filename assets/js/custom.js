@@ -13,4 +13,13 @@
       fitty(".fittext");
     },
   };
+
+  Drupal.behaviors.header = {
+    attach: function (context, settings) {
+      $("#showCheckbox").click(function(){
+        $(this).parent().siblings().show();
+      });
+    },
+  };
+
 })(jQuery);
