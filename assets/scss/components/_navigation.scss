@@ -4,11 +4,13 @@
 
 .usa-nav__primary {
   .usa-nav__primary-item {
+    @include underline-from-center();
     > .usa-nav__link:hover::after {
       background-color: transparent;
     }
     button.usa-nav__link {
-      &[aria-expanded="false"] {@include underline-from-center();
+      &[aria-expanded="false"] {
+        @include underline-from-center();
         &:before {
           margin-left: 1em;
           margin-right: 1em;
