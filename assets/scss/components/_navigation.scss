@@ -3,10 +3,8 @@
 
 .usa-nav__primary {
   .usa-nav__link {
-    &:hover {
-      ::after {
-        background-color: transparent;
-      }
+    &:hover::after {
+      background-color: transparent;
     }
   }
   button.usa-nav__link {
