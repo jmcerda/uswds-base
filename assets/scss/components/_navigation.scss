@@ -14,7 +14,7 @@
         }
       }
     }
-    .usa-nav__link::after {
+    .usa-nav__link {
       @include underline-from-center();
     }
   }
