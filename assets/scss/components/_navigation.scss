@@ -1,8 +1,10 @@
 // Navigation dropdowns
 // ---------------------------------
 
-//.usa-nav__submenu {
-//  &[aria-expanded="false"] {
-//    display: none;
-//  }
-//}
+.usa-nav__submenu {
+  &[aria-expanded="false"] {
+    span {
+      display: none;
+    }
+  }
+}
