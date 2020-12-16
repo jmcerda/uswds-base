@@ -16,6 +16,11 @@
     }
     .usa-nav__link {
       @include underline-from-center();
+      &:before {
+        margin-left: 1em;
+        margin-right: 1em;
+        background: $theme-color-primary;
+      };
     }
   }
 }
