@@ -2,9 +2,9 @@
 // ---------------------------------
 
 .usa-nav__submenu {
-  &[aria-expanded="false"] {
-    span {
-      display: none;
+  button.usa-nav__link {
+    &[aria-expanded="false"] + span {
+        display: none;
     }
   }
 }
