@@ -1,3 +1,4 @@
+@import "../effects/hover/hover";
 // Navigation dropdowns
 // ---------------------------------
 
@@ -5,6 +6,7 @@
   .usa-nav__primary-item {
     > .usa-nav__link:hover::after {
       background-color: transparent;
+      @include underline-from-center();
     }
     button.usa-nav__link {
       &[aria-expanded="false"] {
