@@ -8,24 +8,18 @@
       background-color: transparent;
     }
     button.usa-nav__link {
-      &[aria-expanded="false"] {
+      &[aria-expanded="false"] {@include underline-from-center();
+        &:before {
+          margin-left: 1em;
+          margin-right: 1em;
+          background: color('primary');
+          &:focus {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
         + ul.usa-nav__submenu {
           display: none;
-        }
-      }
-    }
-    .usa-nav__link {
-      @include underline-from-center();
-      &:before {
-        margin-left: 1em;
-        margin-right: 1em;
-        background: color('primary');
-        &:focus {
-          margin-left: 0;
-          margin-right: 0;
-        }
-        &[aria-expanded="true"] {
-          background: color('primary-darker');
         }
       }
     }
