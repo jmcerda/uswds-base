@@ -20,7 +20,7 @@
         margin-left: 1em;
         margin-right: 1em;
         background: color('primary');
-        &:active {
+        &:focus {
           margin-left: 0;
           margin-right: 0;
         }
