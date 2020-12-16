@@ -6,7 +6,6 @@
   .usa-nav__primary-item {
     > .usa-nav__link:hover::after {
       background-color: transparent;
-      //@include underline-from-center();
     }
     button.usa-nav__link {
       &[aria-expanded="false"] {
@@ -14,6 +13,9 @@
           display: none;
         }
       }
+    }
+    .usa-nav__link::after {
+      @include underline-from-center();
     }
   }
 }
