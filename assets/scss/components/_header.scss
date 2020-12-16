@@ -1,9 +1,13 @@
-.usa-banner {
+.usa-banner__header {
   #gov-banner {
     display: none;
   }
 }
-
+.usa-banner__header--expanded {
+  #gov-banner {
+    display: block;
+  }
+}
 
 #logo.usa-logo {
   @include at-media("tablet") {
