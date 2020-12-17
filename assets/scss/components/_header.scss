@@ -1,11 +1,11 @@
 // USA Banner
 .usa-banner__header {
-  #gov-banner {
+  + #gov-banner {
     display: none;
   }
 }
 .usa-banner__header--expanded {
-  #gov-banner {
+  + #gov-banner {
     display: block;
   }
 }
