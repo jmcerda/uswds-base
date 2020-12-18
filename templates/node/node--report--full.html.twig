@@ -103,10 +103,8 @@
     <div class="report-field-container grid-container">
       {{ content|without('field_oversight_url', 'field_file') }}
     </div>
-    <div class="report-links-container grid-container">
-      <button class="usa-button">{{ content.field_file }}</button>
-      {{ content.field_oversight_url }}
-    </div>
+    <span><button class="usa-button">{{ content.field_file }}</button></span>
+    <span>{{ content.field_oversight_url }}<span>
   </div>
 
 </article>
