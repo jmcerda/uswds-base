@@ -1,10 +1,10 @@
 // USA Banner
-.usa-banner__header {
+header.usa-banner__header {
   + #gov-banner {
     display: none;
   }
 }
-.usa-banner__header--expanded {
+header.usa-banner__header--expanded {
   + #gov-banner {
     display: block;
   }
