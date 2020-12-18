@@ -101,7 +101,11 @@
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
     {% endif %}
     <div class="report-field-container grid-container">
-      {{ content }}
+      {{ content|without('field_oversight_url', 'field_file') }}
+    </div>
+    <div class="report-links-container grid-container">
+      <button class="usa-button">{{ content.field_file }}</button>
+      {{ content.field_oversight_url }}
     </div>
   </div>
 
