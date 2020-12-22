@@ -101,11 +101,13 @@
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
     {% endif %}
     <h2>Report Information</h2>
-    <span><button class="usa-button">{{ content.field_file }}</button></span>
+    <span class="float-right"><button class="usa-button--accent-cool">{{ content.field_file }}</button></span>
     <div class="report-field-container grid-container">
       {{ content|without('field_oversight_url', 'field_file', 'field_number_of_recommendations', 'field_recommendations') }}
     </div>
-    <div><a href="#">Read at Oversight.gov</a></div>
+    <div class="margin-top-2em">
+      <span class="float-right"><a href="https://www.google.com">View report on Oversight.gov</a></span>
+    </div>
     <h2>Open Recommendations</h2>
     <div class="recommendation-field-container grid-container">
       {{ content.field_number_of_recommendations }}
