@@ -101,7 +101,7 @@
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
     {% endif %}
     <h2>Report Information</h2>
-    <div class="report-action margin-bottom-2em"><button class="usa-button usa-button--accent-cool"><a href="{{ content.field_file }}">Download report</a></button></div>
+    <div class="report-action margin-bottom-2em"><a class="usa-button usa-button--accent-cool" href="{{ content.field_file }}">Download report</a></div>
     <div class="report-field-container grid-container">
       {{ content|without('field_oversight_url', 'field_file', 'field_number_of_recommendations', 'field_recommendations') }}
     </div>
