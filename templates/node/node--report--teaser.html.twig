@@ -84,16 +84,25 @@
       </h3>
     {% endif %}
     {{ title_suffix }}
-
-    {% if display_submitted %}
-      <footer>
-        {{ author_picture }}
-        <div{{ author_attributes }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-          {{ metadata }}
-        </div>
-      </footer>
-    {% endif %}
+    <ul class="usa-collection__meta" aria-label="More information">
+      {% if display_submitted %}
+      <li class="usa-collection__meta-item">
+        <footer>
+          {{ author_picture }}
+          <div{{ author_attributes }}>
+            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+            {{ metadata }}
+          </div>
+        </footer>
+      </li>
+      {% endif %}
+      <li class="usa-collection__meta-item">
+        {{ content.field_publication_date }}
+      </li>
+      <li class="usa-collection__meta-item">
+        {{ content.field_report_number }}
+      </li>
+    </ul>
 
     <div{{ content_attributes }}>
 
@@ -101,7 +110,7 @@
       <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
       {% endif %}
 
-      {{ content }}
+      {{ content|without ('field_publication_date', 'field_report_number') }}
     </div>
   </div>
 
