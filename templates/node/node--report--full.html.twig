@@ -75,9 +75,9 @@
 {% if not node.isPublished() %}
   {% set attributes = attributes.addClass('node--unpublished') %}
 {% endif %}
+<h2>Report Information</h2>
+<div class="report-action margin-bottom-2em"><a class="usa-button usa-button--accent-cool" href="{{ content.field_file | file_url }}">Download report</a></div>
 <article{{ attributes }}>
-  <h2>Report Information</h2>
-  <div class="report-action margin-bottom-2em"><a class="usa-button usa-button--accent-cool" href="{{ content.field_file }}">Download report</a></div>
   {{ title_prefix }}
   {% if not page %}
     <h2{{ title_attributes }}>
