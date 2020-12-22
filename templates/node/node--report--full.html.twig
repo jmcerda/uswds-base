@@ -110,7 +110,7 @@
     {% if node.field_recommendations.0.target_id %}
       <h2>Open Recommendations</h2>
       <div class="recommendation-field-container grid-container">
-        <span>{{ content.field_number_of_recommendations }} {% if node.field_number_of_recommendations.0.value == 1 %} recommendation{% else %} recommendations{% endif %}</span>
+        <span>{{ content.field_number_of_recommendations }} {% if node.field_number_of_recommendations.0.value == 1 %} recommendation {% else %} recommendations {% endif %}</span>
         <span>{{ content.field_recommendations }}</span>
       </div>
     {% endif %}
