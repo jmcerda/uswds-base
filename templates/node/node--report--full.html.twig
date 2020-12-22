@@ -105,7 +105,7 @@
       {{ content|without('field_oversight_url', 'field_file', 'field_number_of_recommendations', 'field_recommendations') }}
     </div>
     <div class="report-action margin-top-2em">
-      <a href="{{ node.field_oversight_url.entity.uri.value }}">View report on Oversight.gov</a>
+      <a href="{{ node.field_oversight_url.0.url }}">View report on Oversight.gov</a>
     </div>
 
       <h2>Open Recommendations</h2>
