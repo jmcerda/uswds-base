@@ -100,11 +100,17 @@
     {% if not node.isPublished() %}
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
     {% endif %}
-    <div class="report-field-container grid-container">
-      {{ content|without('field_oversight_url', 'field_file') }}
-    </div>
+    <h2>Report Information</h2>
     <span><button class="usa-button">{{ content.field_file }}</button></span>
     <span><a class="usa-button" href="{{ content.field_oversight_url }}">Read at Oversight.gov</a></span>
+    <div class="report-field-container grid-container">
+      {{ content|without('field_oversight_url', 'field_file', 'field_number_of_recommendations', 'field_recommendations') }}
+    </div>
+    <h2>Open Recommendations</h2>
+    <div class="recommendation-field-container grid-container">
+      {{ content.field_number_of_recommendations }}
+      {{ content.field_recommendations }}
+    </div>
   </div>
 
 </article>
