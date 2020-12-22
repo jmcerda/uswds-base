@@ -84,32 +84,33 @@
       </h3>
     {% endif %}
     {{ title_suffix }}
-    <ul class="usa-collection__meta" aria-label="More information">
+    <div class="usa-collection__meta" aria-label="More information">
       {% if display_submitted %}
-      <li class="usa-collection__meta-item">
-        <footer>
-          {{ author_picture }}
-          <div{{ author_attributes }}>
-            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-            {{ metadata }}
-          </div>
-        </footer>
-      </li>
+        <div class="usa-collection__meta-item">
+          <footer>
+            {{ author_picture }}
+            <div{{ author_attributes }}>
+              {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+              {{ metadata }}
+            </div>
+          </footer>
+        </div>
       {% endif %}
-      <li class="usa-collection__meta-item">
-        {{ content.field_publication_date }}
-      </li>
-      <li class="usa-collection__meta-item">
-        {{ content.field_report_number }}
-      </li>
-    </ul>
+    </div>
 
     <div{{ content_attributes }}>
 
       {% if not node.isPublished() %}
       <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
       {% endif %}
-
+      <div class="usa-collection__meta" aria-label="More information">
+        <div class="usa-collection__meta-item">
+          {{ content.field_publication_date }}
+        </div>
+        <div class="usa-collection__meta-item">
+          {{ content.field_report_number }}
+        </div>
+      </div>
       {{ content|without ('field_publication_date', 'field_report_number') }}
     </div>
   </div>
