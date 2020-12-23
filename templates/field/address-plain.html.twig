@@ -38,5 +38,10 @@
 #}
 
 <p class="address usa-collection__meta-item usa-tag" translate="no">
-  {{ address }}
+  {% if dependent_locality.name or locality.name or administrative_area.code %}
+    {{ locality }}, {{ administrative_area.code }}
+  {% endif %}
+  {% if country.name %}
+    {{ country.name }}
+  {% endif %}
 </p>
