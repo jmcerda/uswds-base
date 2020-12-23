@@ -75,49 +75,51 @@
 {% if not node.isPublished() %}
   {% set attributes = attributes.addClass('node--unpublished') %}
 {% endif %}
-<article{{ attributes.addClass(classes, 'usa-collection__item') }}>
-  <div class="usa-collection__body">
-    <div class="usa-collection__meta" aria-label="More information">
-      <div class="usa-collection__meta-item">
-        {{ content.field_publication_date }}
-      </div>
-    </div>
-    {{ title_prefix }}
-    {% if not page %}
-      <h3{{ title_attributes.addClass(classes, 'usa-collection__heading') }}>
-        <a class="usa-link" href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h3>
-    {% endif %}
-    {{ title_suffix }}
-    <div class="usa-collection__meta" aria-label="More information">
-      {% if display_submitted %}
-        <div class="usa-collection__meta-item">
-          <footer>
-            {{ author_picture }}
-            <div{{ author_attributes }}>
-              {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-              {{ metadata }}
-            </div>
-          </footer>
-        </div>
-      {% endif %}
-    </div>
-
-    <div{{ content_attributes }}>
-      {% if not node.isPublished() %}
-      <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
-      {% endif %}
+<article{{ attributes }}>
+  <div class="usa-collection__item">
+    <div class="usa-collection__body">
       <div class="usa-collection__meta" aria-label="More information">
         <div class="usa-collection__meta-item">
-          {{ content.field_report_number }}
+          {{ content.field_publication_date }}
         </div>
       </div>
-      <p class="usa-collection__description">{{ content.body }}</p>
-      <div class="usa-collection__meta" aria-label="Topics">
-        {{ content|without ('field_publication_date', 'field_report_number', 'body') }}
+      {{ title_prefix }}
+      {% if not page %}
+        <h3{{ title_attributes.addClass(classes, 'usa-collection__heading') }}>
+          <a class="usa-link" href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h3>
+      {% endif %}
+      {{ title_suffix }}
+      <div class="usa-collection__meta" aria-label="More information">
+        {% if display_submitted %}
+          <div class="usa-collection__meta-item">
+            <footer>
+              {{ author_picture }}
+              <div{{ author_attributes }}>
+                {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+                {{ metadata }}
+              </div>
+            </footer>
+          </div>
+        {% endif %}
       </div>
-    </div>
 
+      <div{{ content_attributes }}>
+        {% if not node.isPublished() %}
+        <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
+        {% endif %}
+        <div class="usa-collection__meta" aria-label="More information">
+          <div class="usa-collection__meta-item">
+            {{ content.field_report_number }}
+          </div>
+        </div>
+        <p class="usa-collection__description">{{ content.body }}</p>
+        <div class="usa-collection__meta" aria-label="Topics">
+          {{ content|without ('field_publication_date', 'field_report_number', 'body') }}
+        </div>
+      </div>
+
+    </div>
   </div>
 
 </article>
