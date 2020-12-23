@@ -62,16 +62,8 @@ function oig_base_form_entity_browser_browse_content_form_alter(&$form, FormStat
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-//function oig_base_theme_suggestions_HOOK_alter(array &$suggestions, array $variables) {
-//
-//  $element = $variables['element'];
-//  $suggestions[] = 'field__' . $element['#entity_type'] . '__' . $element['#bundle'] . '__' . $element['#view_mode'];
-//}
+function oig_base_theme_suggestions_HOOK_alter(array &$suggestions, array $variables) {
 
-function oig_base_theme_theme_suggestions_HOOK_alter(array &$suggestions, array $variables) {
-  $suggestions[] = 'field__' .
-    $variables['element']['#entity_type'] . '__' .
-    $variables['element']['#bundle'] . '__' .
-    $variables['element']['#view_mode'];
+  $element = $variables['element'];
+  $suggestions[] = 'field__' . $element['#entity_type'] . '__' . $element['#bundle'] . '__' . $element['#view_mode'];
 }
-
