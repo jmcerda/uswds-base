@@ -70,7 +70,7 @@ function oig_base_form_entity_browser_browse_content_form_alter(&$form, FormStat
 
 function oig_base_theme_theme_suggestions_field_alter(&$suggestions, $variables) {
   $suggestions[] = 'field__node__' .
-    $variables['element']['#field_name'] . '__' .
+    $variables['element']['#entity_type'] . '__' .
     $variables['element']['#bundle'] . '__' .
     $variables['element']['#view_mode'];
 }
