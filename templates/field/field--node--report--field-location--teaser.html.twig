@@ -57,22 +57,22 @@
   {% if multiple %}
     <div class="display-inline">
       {% for item in items %}
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+        <div class="display-inline">{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+      <div class="display-inline">{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    <div class="display-inline">{{ label }}</div>
     {% if multiple %}
       <div class="display-inline">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      <div class="display-inline">{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
