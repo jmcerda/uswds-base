@@ -77,45 +77,24 @@ function oig_base_form_entity_browser_browse_content_form_alter(&$form, FormStat
 
 
 /**
- * Implements hook_theme_suggestions_field_alter().
- */
-//function oig_base_theme_suggestions_field_alter(array $variables) {
-//
-//  $suggestions = [];
-//
-//  $element = $variables['element'];
-//
-//  $field_name = $element['#field_name'];
-//  $view_mode = $element['#view_mode'];
-//  $entity_type = $element['#entity_type'];
-//  $bundle = $element['#bundle'];
-//
-//  $suggestions[] = 'field__' . $field_name . '__' . $view_mode;
-//  $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $view_mode;
-//  $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $view_mode;
-//  $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $field_name . '__' . $view_mode;
-//
-//  return $suggestions;
-//}
-
-/**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function oig_base_theme_suggestions_HOOK_alter(array $vars) {
-  $original = $vars['theme_hook_original'];
-  $name = $vars['element']['#field_name'];
+function oig_base_theme_suggestions_HOOK_alter(array $variables) {
 
-  // View mode
-  if ($vars['element']['#view_mode']) {
-    $view_mode = $vars['element']['#view_mode'];
-    $hooks[] = $original . '__' . $view_mode;
-    $hooks[] = $original . '__' . $view_mode . '__' . $name;
-  }
+  $suggestions = [];
 
-  // Name
-  switch ($name) {
-    case 'field_name':
-      $suggestions[] = $original . '__no_markup';
-      break;
-  }
+  $element = $variables['element'];
+
+  $field_name = $element['#field_name'];
+  $view_mode = $element['#view_mode'];
+  $entity_type = $element['#entity_type'];
+  $bundle = $element['#bundle'];
+
+  $suggestions[] = 'field__' . $field_name . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $field_name . '__' . $view_mode;
+
+  return $suggestions;
 }
+
