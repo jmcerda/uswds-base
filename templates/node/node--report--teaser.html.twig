@@ -77,6 +77,11 @@
 {% endif %}
 <article{{ attributes.addClass(classes, 'usa-collection__item') }}>
   <div class="usa-collection__body">
+    <div class="usa-collection__meta" aria-label="More information">
+      <div class="usa-collection__meta-item">
+        {{ content.field_publication_date }}
+      </div>
+    </div>
     {{ title_prefix }}
     {% if not page %}
       <h3{{ title_attributes.addClass(classes, 'usa-collection__heading') }}>
@@ -99,20 +104,20 @@
     </div>
 
     <div{{ content_attributes }}>
-
       {% if not node.isPublished() %}
       <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
       {% endif %}
       <div class="usa-collection__meta" aria-label="More information">
         <div class="usa-collection__meta-item">
-          {{ content.field_publication_date }}
-        </div>
-        <div class="usa-collection__meta-item">
           {{ content.field_report_number }}
         </div>
       </div>
-      {{ content|without ('field_publication_date', 'field_report_number') }}
+      <p class="usa-collection__description">{{ content.body }}</p>
+      <div class="usa-collection__meta" aria-label="Topics">
+        {{ content|without ('field_publication_date', 'field_report_number', 'body') }}
+      </div>
     </div>
+
   </div>
 
 </article>
