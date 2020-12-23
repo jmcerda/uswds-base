@@ -36,9 +36,10 @@
  * @ingroup themeable
  */
 #}
+
 <p class="address usa-collection__meta-item usa-tag" translate="no">
-  {% if locality.name or administrative_area.code %}
-    {{ locality.name }} {{ administrative_area.code }}
+  {% if dependent_locality.name or locality.name or administrative_area.code %}
+    {{ dependent_locality.name }} {{ locality.name }}, {{ administrative_area.code }}
   {% endif %}
   {% if country.name %}
     {{ country.name }}
