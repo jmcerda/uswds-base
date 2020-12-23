@@ -97,7 +97,7 @@ function oig_base_form_entity_browser_browse_content_form_alter(&$form, FormStat
 /**
  * Implements hook_theme_suggestions_field_alter().
  */
-function oig_base_theme_suggestions_field_alter(&hooks, $vars) {
+function oig_base_theme_suggestions_field_alter(array $variables) {
   $original = $vars['theme_hook_original'];
   $name = $vars['element']['#field_name'];
 
