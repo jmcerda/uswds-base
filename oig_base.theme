@@ -87,7 +87,7 @@ function oig_base_theme_theme_suggestions_field(array $variables) {
   $bundle = $element['#bundle'];
 
   $suggestions[] = 'field__' . $field_name . '__' . $view_mode;
-  $suggestions[] = 'field__' . $entity_type . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $view_mode;
   $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $view_mode;
   $suggestions[] = 'field__' . $entity_type . '__' . $bundle . '__' . $field_name . '__' . $view_mode;
 
