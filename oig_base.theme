@@ -75,7 +75,7 @@ function oig_base_form_entity_browser_browse_content_form_alter(&$form, FormStat
 //    $variables['element']['#view_mode'];
 //}
 
-function oig_base_theme_theme_suggestions_HOOK_alter(array $variables) {
+function oig_base_theme_suggestions_HOOK_alter(array $variables) {
 
   $suggestions = [];
 
