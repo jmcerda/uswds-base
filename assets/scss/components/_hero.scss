@@ -5,16 +5,16 @@ section.usa-hero {
   .field--name-label.field--label-hidden {
     display: none;
   }
+  .hero-slider-background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
   .slick__slide {
     height: 400px;
-    .hero-slider-background {
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 100%;
-      .grid-container {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-      }
+    .grid-container {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
   }
 }
