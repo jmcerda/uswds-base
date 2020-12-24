@@ -9,6 +9,12 @@ section.usa-hero {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+    .usa-hero__callout {
+      @include at-media("desktop") {
+        @include grid-col(6);
+        max-width: none;
+      }
+    }
   }
   .slick__slide {
     height: 400px;
