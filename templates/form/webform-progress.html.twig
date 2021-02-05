@@ -22,6 +22,7 @@
 <div class="webform-progress usa-step-indicator usa-step-indicator--center" aria-label="progress">
 
   {{ bar }}
+  {{ _context|keys }}
   {% if summary or percentage %}
     <div class="webform-progress__status">
       {% if summary %}
