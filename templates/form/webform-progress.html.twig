@@ -23,7 +23,7 @@
 
   {{ bar }}
 {#  {{ dump(_context|keys) }}#}
-  {{ dump(percentage) }}
+{#  {{ dump(percentage) }}#}
   {% if summary or percentage %}
     <div class="webform-progress__status">
       {% if summary %}
@@ -36,7 +36,7 @@
               <span class="usa-step-indicator__total-steps">of {{ total }}</span>
             </span>
           </span>
-          <span class="usa-step-indicator__heading-text">{{ current_page }}</span>
+          <span class="usa-step-indicator__heading-text">{{ percentage }}</span>
           </h2>
         </div>
 
