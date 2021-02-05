@@ -28,15 +28,15 @@
     <div class="webform-progress__status">
       {% if summary %}
         <div class="usa-step-indicator__header">
-          <h2 class="usa-step-indicator__heading">
+          <h2 class="usa-step-indicator__heading maxw-full">
           <span class="usa-step-indicator__heading-counter">
             <span class="usa-sr-only">Step</span>
-            <span class="webform-progress__summary" data-webform-progress-summary>
+            <span class="webform-progress__summary float-left" data-webform-progress-summary>
               <span class="usa-step-indicator__current-step">{{ index }}</span>
               <span class="usa-step-indicator__total-steps">of {{ total }}</span>
             </span>
           </span>
-          <span class="usa-step-indicator__heading-text">{{ percentage }}</span>
+          <span class="usa-step-indicator__heading-text float-right">{{ percentage }}</span>
           </h2>
         </div>
 
