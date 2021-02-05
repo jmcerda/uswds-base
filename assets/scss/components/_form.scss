@@ -27,10 +27,11 @@ form.usa-form {
       }
       .webform-progress__percentage.usa-step-indicator__heading-text {
         float: right;
-        top: 49%;
-        position: absolute;
-        transform: translateY(-49%);
-        margin: 0;
+        top: 40%;
+        //position: absolute;
+        transform: translateY(40%);
+        -ms-transform: translateY(40%);
+        margin: 0 1em;
       }
     }
   }
