@@ -22,8 +22,6 @@
 <div class="webform-progress usa-step-indicator usa-step-indicator--center" aria-label="progress">
 
   {{ bar }}
-  {{ dump(total) }}
-  {{ dump(index) }}
   {% if summary or percentage %}
     <div class="webform-progress__status">
       {% if summary %}
@@ -32,8 +30,8 @@
           <span class="usa-step-indicator__heading-counter">
             <span class="usa-sr-only">Step</span>
             <span class="webform-progress__summary" data-webform-progress-summary>
-              <span class="usa-step-indicator__current-step">temp</span>
-              <span class="usa-step-indicator__total-steps">of temp</span>
+              <span class="usa-step-indicator__current-step">{{ index }}</span>
+              <span class="usa-step-indicator__total-steps">of {{ total }}</span>
             </span>
           </span>
           <span class="usa-step-indicator__heading-text">{{ current_page }}</span>
