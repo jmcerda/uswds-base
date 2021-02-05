@@ -1,3 +1,8 @@
+form.usa-form {
+  max-width: 100%;
+}
+
+
 // Header search form
 #views-exposed-form-search-page-search {
   .form--inline {
@@ -7,4 +12,27 @@
       height: 2rem;
     }
   }
+}
+
+
+// Hotline form.
+.webform-progress {
+  .webform-progress__status {
+    width: 100%;
+    h2.usa-step-indicator__heading {
+      position: relative;
+      .usa-step-indicator__heading-counter {
+        float: left;
+
+      }
+      .webform-progress__percentage.usa-step-indicator__heading-text {
+        float: right;
+        top: 49%;
+        position: absolute;
+        transform: translateY(-49%);
+        margin: 0;
+      }
+    }
+  }
+
 }

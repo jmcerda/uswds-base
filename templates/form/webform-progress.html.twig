@@ -27,8 +27,8 @@
     <div class="webform-progress__status">
       {% if summary %}
         <div class="usa-step-indicator__header">
-          <h2 class="usa-step-indicator__heading maxw-full">
-          <span class="usa-step-indicator__heading-counter float-left">
+          <h2 class="usa-step-indicator__heading">
+          <span class="usa-step-indicator__heading-counter">
             <span class="usa-sr-only">Step</span>
             <span class="webform-progress__summary" data-webform-progress-summary>
               <span class="usa-step-indicator__current-step">{{ index }}</span>
@@ -37,7 +37,7 @@
           </span>
           <span class="usa-step-indicator__heading-text"></span>
           {% if percentage %}
-            <span class="webform-progress__percentage usa-step-indicator__heading-text float-right"><span data-webform-progress-percentage>{{ percentage }}</span>
+            <span class="webform-progress__percentage usa-step-indicator__heading-text"><span data-webform-progress-percentage>{{ percentage }}</span>
           {% endif %}
           </h2>
         </div>
