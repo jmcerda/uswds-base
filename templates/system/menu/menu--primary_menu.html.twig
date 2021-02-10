@@ -40,7 +40,7 @@
 
         {% if menu_level == 0 and item.below %}
           <button class="usa-accordion__button usa-nav__link " aria-expanded="false" aria-controls="megamenu-{{ loop.index }}">
-            <a href="{{ item.url }}"><span>{{ item.title }}</span></a>
+            <span>{{ item.title }}</span>
           </button>
         {% endif %}
 
