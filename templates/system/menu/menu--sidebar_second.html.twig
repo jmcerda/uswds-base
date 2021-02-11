@@ -19,7 +19,8 @@ We call a macro which calls itself to render the full tree.
   {% if items %}
 
     {% if menu_level == 0 %}
-<ul class="usa-sidenav">
+<nav aria-label="Secondary navigation">
+<nav class="usa-sidenav">
   {% else %}
   <ul class="usa-sidenav__sublist">
     {% endif %}
@@ -37,5 +38,8 @@ We call a macro which calls itself to render the full tree.
       </li>
     {% endfor %}
   </ul>
+  {% if menu_level == 0 %}
+</nav>
+  {%  endif %}
   {% endif %}
   {% endmacro %}
