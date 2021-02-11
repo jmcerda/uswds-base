@@ -26,7 +26,7 @@
         <button class="usa-menu-btn">{{ 'Menu'|t }}</button>
       </div>
 
-      <nav class="usa-nav" role="navigation">
+      <nav aria-label="Primary navigation" class="usa-nav" role="navigation">
         <button class="usa-nav__close">
           <img src="{{ active_theme_path }}/assets/img/close.svg" alt="close" />
         </button>
@@ -56,12 +56,12 @@
 </header>
 
 {% if page.hero %}
-  <section class="usa-hero">
-    {{ page.hero }}
-  </section>
+     <section class="usa-hero">
+  {{ page.hero }}
+</section>
 {% endif %}
 
- <main class="usa-section">
+ <main class="usa-section" id="main-content">
    <div class="{{ main_class }}">
      <div class="grid-row grid-gap">
        <div class="grid-col-12">
