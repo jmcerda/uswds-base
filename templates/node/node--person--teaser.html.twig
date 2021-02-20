@@ -76,7 +76,8 @@
   {% set attributes = attributes.addClass('node--unpublished') %}
 {% endif %}
 <article{{ attributes }}>
-  <img class="usa-collection__img" src="{{ content.field_teaser_image|file_uri }}" alt="{{ content.field_teaser_image['#items'].alt }}">
+  <img class="usa-collection__img" src="{{ content.field_teaser_image }}" alt="{{ content.field_teaser_image['#items'].alt }}">
+  {{ content.field_teaser_image }}
   <div class="usa-collection__body">
 
     {{ title_prefix }}
