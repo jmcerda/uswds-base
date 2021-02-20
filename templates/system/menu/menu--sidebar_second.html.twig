@@ -19,27 +19,26 @@ We call a macro which calls itself to render the full tree.
   {% if items %}
 
     {% if menu_level == 0 %}
-<nav aria-label="Secondary navigation">
-<nav class="usa-sidenav">
-  {% else %}
-  <ul class="usa-sidenav__sublist">
-    {% endif %}
+      <nav class="usa-sidenav" aria-label="Secondary navigation">
+        {% else %}
+        <ul class="usa-sidenav__sublist">
+          {% endif %}
 
-    {% for item in items %}
-      <li class="usa-sidenav__item">
-        <a href="{{ item.url }}"{% if item.in_active_trail %} class="usa-current"{% endif %}>
-          <span>{{ item.title }}</span>
-        </a>
+          {% for item in items %}
+            <li class="usa-sidenav__item">
+              <a href="{{ item.url }}"{% if item.in_active_trail %} class="usa-current"{% endif %}>
+                <span>{{ item.title }}</span>
+              </a>
 
-        {% if item.in_active_trail and item.below %}
-          {{ menus.menu_links(item.below, menu_level + 1) }}
-        {% endif %}
+              {% if item.in_active_trail and item.below %}
+                {{ menus.menu_links(item.below, menu_level + 1) }}
+              {% endif %}
 
-      </li>
-    {% endfor %}
-  </ul>
-  {% if menu_level == 0 %}
-</nav>
-  {%  endif %}
+            </li>
+          {% endfor %}
+        </ul>
+        {% if menu_level == 0 %}
+      </nav>
+    {%  endif %}
   {% endif %}
-  {% endmacro %}
+{% endmacro %}
