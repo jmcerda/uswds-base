@@ -86,7 +86,7 @@
     {% endif %}
     {{ title_suffix }}
     <p class="usa-collection__description">
-      {{ content.field_teaser_content }}
+      {{ content.field_teaser_content.0.value|striptags }}
     </p>
     {% if display_submitted %}
       <footer>
