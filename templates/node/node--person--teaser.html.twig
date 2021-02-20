@@ -86,7 +86,7 @@
     {% endif %}
     {{ title_suffix }}
     <p class="usa-collection__description">
-      {{ node.field_teaser_content }}
+      {{ content.field_teaser_content }}
     </p>
     {% if display_submitted %}
       <footer>
@@ -104,7 +104,7 @@
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
     {% endif %}
 
-    {{ content|without(field_teaser_content) }}
+    {{ content|without('field_teaser_content') }}
   </div>
 
 </article>
