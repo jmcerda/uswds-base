@@ -81,7 +81,7 @@
     {% endif %}
     {% for item in items %}
       <div{{ item.attributes.addClass('field__item', 'report-action', 'margin-bottom-2em') }}>
-        <a class="usa-button usa-button--accent-cool display-block" href="{{ file_url(item.entity.field_document.entity.uri.value) }}}" target="_blank">Download</a>
+        <a class="usa-button usa-button--accent-cool display-block" href="{{ file_url(item.entity.field_document.entity.uri.value) }}" target="_blank">Download</a>
       </div>
     {% endfor %}
     {% if multiple %}
