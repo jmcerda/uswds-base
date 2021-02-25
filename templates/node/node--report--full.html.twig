@@ -75,7 +75,6 @@
 {% if not node.isPublished() %}
   {% set attributes = attributes.addClass('node--unpublished') %}
 {% endif %}
-{{ dpm(content['field_file']) }}
 <h2>Report Information</h2>
 <article{{ attributes }}>
   {{ title_prefix }}
