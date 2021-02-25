@@ -74,14 +74,14 @@
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
-    {{ dump('field_file') }}
+    {{ dump(field_file) }}
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
       <div class="field__items">
     {% endif %}
     {% for item in items %}
       <div{{ item.attributes.addClass('field__item', 'report-action', 'margin-bottom-2em') }}>
-        <a class="usa-button usa-button--accent-cool display-block" href="{{ file_url(node.field_file.entity.field_document.entity.fileuri) }}" target="_blank">Download</a>
+        <a class="usa-button usa-button--accent-cool display-block" href="{{ file_url(node.field_file.entity.field_document.entity.uri.value) }}" target="_blank">Download</a>
       </div>
     {% endfor %}
     {% if multiple %}
