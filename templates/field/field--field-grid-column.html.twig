@@ -52,9 +52,9 @@
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
-{#{%#}
-{# set grid_class = field.field_content.grid_column.field_number_of_columns.value#}
-{#%}#}
+{%
+ set grid_class = element['#object'].field_number_of_columns.value
+%}
 
 {% if label_hidden %}
   {% if multiple %}
@@ -65,7 +65,7 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item', 'grid-col-4') }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(classes, grid_class, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
 {% else %}
@@ -75,7 +75,7 @@
       <div class="field__items grid-row grid-gap, margin-top-6 margin-bottom-6">
     {% endif %}
     {% for item in items %}
-      <div{{ item.attributes.addClass('field__item', 'grid-col-4') }}>{{ item.content }}</div>
+      <div{{ item.attributes.addClass(grid_class, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
       </div>
