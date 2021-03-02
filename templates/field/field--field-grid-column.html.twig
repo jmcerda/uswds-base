@@ -53,12 +53,20 @@
   ]
 %}
 {%
- set grid_class = element['#object'].field_grid_column.entity.field_number_of_columns.value
+  set grid_class = element['#object'].field_grid_column.entity.field_number_of_columns.value
+%}
+{%
+  set grid_row_classes = [
+    'grid-row',
+    'grid-gap',
+    'margin-top-6',
+    'margin-bottom-6',
+  ]
 %}
 
 {% if label_hidden %}
   {% if multiple %}
-    <div{{ attributes.addClass(classes, 'field__items', 'grid-row', 'grid-gap', 'margin-top-6', 'margin-bottom-6') }}>
+    <div{{ attributes.addClass(classes, grid_row_classes, 'field__items') }}>
       {% for item in items %}
         <div{{ item.attributes.addClass(grid_class, 'field__item') }}>{{ item.content }}</div>
       {% endfor %}
@@ -72,7 +80,7 @@
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% if multiple %}
-      <div class="field__items grid-row grid-gap, margin-top-6 margin-bottom-6">
+      <div {{  attributes.addClass(grid_row_classes, 'field_items') }}>
     {% endif %}
     {% for item in items %}
       <div{{ item.attributes.addClass(grid_class, 'field__item') }}>{{ item.content }}</div>
