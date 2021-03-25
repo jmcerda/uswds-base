@@ -10,4 +10,15 @@
       }
     }
   }
+  .usa-collection__item.grid-col-12 {
+    border-top-width: 1px;
+    border-top-style: solid;
+    margin-top: 1rem;
+    article {
+      border-top: none;
+      .usa-collection__body {
+        margin-top: 0;
+      }
+    }
+  }
 }
