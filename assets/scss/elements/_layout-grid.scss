@@ -142,7 +142,7 @@ $namespace-grid: ns("grid");
   @if map-get($theme-utility-breakpoints, $mq-key) {
     @each $width-key, $width-value in $system-layout-grid-widths {
       @include at-media($mq-key) {
-        .#{$mq-key}#{$namespace-grid}offset-#{$width-key} {
+        .#{$mq-key}-#{$namespace-grid}offset-#{$width-key} {
           $props: append-important($grid-global, $width-key);
           @include grid-offset($props);
         }
