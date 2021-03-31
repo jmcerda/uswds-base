@@ -14,7 +14,7 @@
     {% set img_background = '' %}
     {% set content_background = '' %}
     {% if paragraph.field_image.entity.field_media_image.entity.fileuri %}
-      {% set background_style = background_style ~ " background-image: url('" ~ file_url(paragraph.field_image.entity.field_media_image.entity.fileuri | image_style('section_background_image')) ~ "');"%}
+      {% set background_style = background_style ~ " background-image: url('" ~ file_url(paragraph.field_image.entity.field_media_image.entity.fileuri) ~ "');"%}
       {% set img_background = 'img-background' %}
       {% set content_background = 'content-background' %}
     {% endif %}
