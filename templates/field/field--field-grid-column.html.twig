@@ -53,9 +53,6 @@
   ]
 %}
 {%
-  set grid_class = element['#object'].field_grid_column.entity.field_number_of_columns.value
-%}
-{%
   set grid_row_classes = [
     'grid-row',
     'grid-gap',
@@ -68,11 +65,17 @@
   {% if multiple %}
     <div{{ attributes.addClass(classes, grid_row_classes, 'field__items') }}>
       {% for item in items %}
+        {%
+          set grid_class = element['#object'].field_grid_column[loop.index0].entity.field_number_of_columns.value
+        %}
         <div{{ item.attributes.addClass(grid_class, 'field__item') }}>{{ item.content }}</div>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
+      {%
+        set grid_class = element['#object'].field_grid_column[loop.index0].entity.field_number_of_columns.value
+      %}
       <div{{ attributes.addClass(classes, grid_class, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
   {% endif %}
@@ -83,6 +86,9 @@
       <div {{  attributes.addClass(grid_row_classes, 'field_items') }}>
     {% endif %}
     {% for item in items %}
+      {%
+        set grid_class = element['#object'].field_grid_column[loop.index0].entity.field_number_of_columns.value
+      %}
       <div{{ item.attributes.addClass(grid_class, 'field__item') }}>{{ item.content }}</div>
     {% endfor %}
     {% if multiple %}
