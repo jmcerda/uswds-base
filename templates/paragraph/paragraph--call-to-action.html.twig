@@ -33,7 +33,7 @@
                 paragraph.field_uswds_button_style.value,
               ]
               %}
-              <div class="margin-top-2"><a class="{{ button_classes | join(' ') }}" href="{{ path(paragraph.field_uswds_button.0.uri.routeName, paragraph.field_uswds_button.0.uri.routeParameters) }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
+              <div class="margin-top-2"><a class="{{ button_classes | join(' ') }}" href="{{ path(paragraph.field_uswds_button.0.uri) }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
             {% endif %}
           </div>
         </div>
