@@ -1,0 +1,17 @@
+.usa-button--alert {
+  @include set-text-and-bg("red-50");
+
+  &:visited {
+    @include set-text-and-bg("red-50");
+  }
+
+  &:hover,
+  &.usa-button--hover {
+    @include set-text-and-bg("red-60v");
+  }
+
+  &:active,
+  &.usa-button--active {
+    @include set-text-and-bg("red-70v");
+  }
+}

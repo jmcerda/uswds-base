@@ -8,4 +8,4 @@ oig_base:
     /libraries/fitty/dist/fitty.min.js: {}
     assets/js/uswds.min.js: {}
     assets/js/custom.js: {}
-    assets/js/fluidvids.js: {}
+    assets/js/fluidvids.js: { scope: footer }
