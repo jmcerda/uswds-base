@@ -1,4 +1,4 @@
-.usa-button--alert {
+.usa-button.usa-button--alert {
   @include set-text-and-bg("red-50");
 
   &:visited {
