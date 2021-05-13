@@ -1,0 +1,23 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    'usa-card-group',
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes) }}>
+    {% block content %}
+
+      <ul class="usa-card-group">
+        {% for item in items %}
+          <li class="{{ field_column_layout }} usa-card">
+            {{ item.content }}
+          </li>
+        {% endfor %}
+      </ul>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
