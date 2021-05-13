@@ -11,9 +11,9 @@
     {% block content %}
 
       <ul class="usa-card-group">
-        {% for item in content %}
+        {% for item in items %}
           <li class="{{ paragraph.field_column_layout.value }} usa-card">
-            {{ content }}
+            {{ item.content }}
           </li>
         {% endfor %}
       </ul>
