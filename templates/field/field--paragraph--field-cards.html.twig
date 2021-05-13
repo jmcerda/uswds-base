@@ -44,12 +44,7 @@
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
     label_display == 'inline' ? 'clearfix',
-  ]
-%}
-{%
-  set title_classes = [
-    'field__label',
-    label_display == 'visually_hidden' ? 'visually-hidden',
+    'usa-card-group'
   ]
 %}
 {%
@@ -58,8 +53,6 @@
     element['#object'].field_column_layout.value,
   ]
 %}
-
-
 <ul{{ attributes.addClass(classes, 'field__items') }}>
   {% for item in items %}
     <li{{ item.attributes.addClass(card_classes, 'field__item') }}>{{ item.content }}</li>

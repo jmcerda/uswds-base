@@ -3,17 +3,12 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    'usa-card-group',
   ]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
-
-      <ul class="usa-card-group">
-        {{ content.field_cards }}
-      </ul>
-
+      {{ content.field_cards }}
     {% endblock %}
   </div>
 {% endblock paragraph %}
