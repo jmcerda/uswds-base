@@ -58,14 +58,14 @@
     <div{{ attributes.addClass(classes, 'field__items') }}>
       {% for item in items %}
         <header class="usa-card__header">
-          <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+          <h2{{ item.attributes.addClass('field__item', 'usa-card__heading') }}>{{ item.content }}</h2>
         </header>
       {% endfor %}
     </div>
   {% else %}
     {% for item in items %}
       <header class="usa-card__header">
-        <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+        <h2{{ attributes.addClass(classes, 'field__item', 'usa-card__heading') }}>{{ item.content }}</h2>
       </header>
     {% endfor %}
   {% endif %}
@@ -77,7 +77,7 @@
     {% endif %}
     {% for item in items %}
       <header class="usa-card__header">
-        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+        <h2{{ item.attributes.addClass('field__item', 'usa-card__heading') }}>{{ item.content }}</h2>
       </header>
     {% endfor %}
     {% if multiple %}
