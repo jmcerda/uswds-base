@@ -7,19 +7,9 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }} style="padding:0;">
+  <div{{ attributes.addClass(classes) }}>
     {% block content %}
-
-      {% if uswds_grid_class %}
-      <div class="{{ uswds_grid_class }}">
-      {% endif %}
-
-      {{ content }}
-
-      {% if uswds_grid_class %}
-      </div>
-      {% endif %}
-
+      <div">{{ content }}</div>
     {% endblock %}
   </div>
 {% endblock paragraph %}
