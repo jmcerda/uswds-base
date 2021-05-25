@@ -18,7 +18,7 @@
  * @see template_preprocess_views_view_field()
  */
 #}
-
+{% set val = field.field_link[0]|raw|render|render %}
 <div class="report-action margin-bottom-2em">
-  <a class="usa-button usa-button--accent-cool display-block" href="{{ view.field.field_link.value|raw }}" target="_blank">Download</a>
+  <a class="usa-button usa-button--accent-cool display-block" href="{{ val }}" target="_blank">Download</a>
 </div>
