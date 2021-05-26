@@ -18,8 +18,8 @@
  * @see template_preprocess_views_view_field()
  */
 #}
-{#{{ dpm(field_oversight_url) }}#}
-{% set val = row[field.field_alias] %}
+
+{% set val = row.field_link[0]|striptags %}
 <div class="report-action margin-bottom-2em">
   <a class="usa-button usa-button--accent-cool display-block" href="{{ val }}" target="_blank">Download</a>
 </div>
