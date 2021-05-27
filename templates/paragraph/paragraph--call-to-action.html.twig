@@ -27,7 +27,7 @@
 
       <section class="{{ section_classes | join(' ') }}" style="{{ background_style }};">
         <div class="grid-container">
-          <div class="cta-content {{ content_background_classes }}">
+          <div class="cta-content {{ content_background_classes | join(' ') }}">
             <h2 class="font-heading-xl">{{ content.field_uswds_title }}</h2>
             <div class="usa-intro">{{ content.field_uswds_body }}</div>
             {% if paragraph.field_link.value %}
