@@ -16,13 +16,14 @@
     {% endif %}
     {% if paragraph.field_text_background.value %}
       {% set content_background_class = 'content-background' %}
+      {% set content_background_style = "background-color: " ~ paragraph.field_text_background.value %}
     {% endif %}
 
     {% block content %}
 
       <section class="{{ section_classes | join(' ') }}" style="{{ background_style }};">
         <div class="grid-container">
-          <div class="cta-content {{ content_background_class }}">
+          <div class="cta-content {{ content_background_class }}" style="{{ content_background_style }}">
             <h2 class="font-heading-xl">{{ content.field_uswds_title }}</h2>
             <div class="usa-intro">{{ content.field_uswds_body }}</div>
             {% if paragraph.field_link.value %}
