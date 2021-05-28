@@ -15,7 +15,7 @@
       {% if paragraph.field_media.value %}
       <div class="usa-card__media">
         <div class="usa-card__img">
-          <img src="https://designsystem.digital.gov/img/introducing-uswds-2-0/built-to-grow--alt.jpg" alt="A placeholder image">
+          <img src="url('{{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri | image_style('thumbnail')) }}')" alt="A placeholder image">
         </div>
       </div>
       {% endif %}
