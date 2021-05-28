@@ -15,7 +15,13 @@
       {% if paragraph.field_media.value %}
       <div class="usa-card__media">
         <div class="usa-card__img">
-          <img src="{{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }}" alt="A placeholder image">
+          {% if {{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }} %}
+            <img src="{{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }}" alt="A placeholder image">
+          {% elseif {{ file_url(paragraph.field_media.entity.field_media_video_file.entity.fileuri) }} %}
+            <img src="{{ file_url(paragraph.field_media.entity.field_media_video_file.entity.fileuri) }}" alt="A placeholder video">
+          {% elseif {{ file_url(paragraph.field_media.entity.field_media_oembed_video.entity.fileuri) }} %}
+            <img src="{{ file_url(paragraph.field_media.entity.field_media_oembed_video.entity.fileuri) }}" alt="A placeholder remote video">
+          {% endif %}
         </div>
       </div>
       {% endif %}
