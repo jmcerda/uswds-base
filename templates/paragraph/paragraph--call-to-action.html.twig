@@ -21,13 +21,14 @@
         paragraph.field_text_background.value
       ]
       %}
+      {% set content_background_opacity = "opacity:" ~ paragraph_field_opacity.0.value %}
     {% endif %}
 
     {% block content %}
 
-      <section class="{{ section_classes | join(' ') }}" style="{{ background_style }};">
+      <section class="{{ section_classes | join(' ') }}" style="{{ background_style }}">
         <div class="grid-container">
-          <div class="cta-content {{ content_background_classes | join(' ') }}">
+          <div class="cta-content {{ content_background_classes | join(' ') }}" style="{{ content_background_opacity }}">
             <h2 class="font-heading-xl">{{ content.field_uswds_title }}</h2>
             <div class="usa-intro">{{ content.field_uswds_body }}</div>
             {% if paragraph.field_link.value %}
