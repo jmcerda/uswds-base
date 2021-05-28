@@ -21,7 +21,7 @@
         paragraph.field_text_background.value
       ]
       %}
-      {% set content_background_opacity = "opacity: " ~ paragraph_field_opacity.value %}
+      {% set content_background_opacity = "opacity: " ~ paragraph.field_opacity.0.value %}
     {% endif %}
 
     {% block content %}
