@@ -17,10 +17,8 @@
         <div class="usa-card__img">
           {% if {{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }} %}
             <img src="{{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }}" alt="A placeholder image">
-          {% elseif {{ file_url(paragraph.field_media.entity.field_media_video_file.entity.fileuri) }} %}
-            <img src="{{ file_url(paragraph.field_media.entity.field_media_video_file.entity.fileuri) }}" alt="A placeholder video">
-          {% elseif {{ file_url(paragraph.field_media.entity.field_media_oembed_video.entity.fileuri) }} %}
-            <img src="{{ file_url(paragraph.field_media.entity.field_media_oembed_video.entity.fileuri) }}" alt="A placeholder remote video">
+          {% else %}
+            {{ paragraph.field_media }}
           {% endif %}
         </div>
       </div>
