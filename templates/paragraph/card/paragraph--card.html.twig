@@ -15,8 +15,19 @@
       {% if paragraph.field_media.value %}
       <div class="usa-card__media">
         <div class="usa-card__img">
-          <img src="{{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }}" alt="A placeholder image">
+{#          <img src="{{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }}" alt="A placeholder image">#}
+          {{ paragraph.field_media }}
         </div>
+
+
+{#        {% if paragraph.field_media.entity.field_media_image.entity.fileuri %}#}
+{#          <img src="{{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }}" alt="A placeholder image">#}
+{#        {% else %}#}
+{#          {{ paragraph.field_media.0.value }}#}
+{#        {% endif %}#}
+
+
+
       </div>
       {% endif %}
       <div class="usa-card__body">
