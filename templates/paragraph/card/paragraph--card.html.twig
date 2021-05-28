@@ -15,10 +15,8 @@
       {% if paragraph.field_media.value %}
       <div class="usa-card__media">
         <div class="usa-card__img">
-          {% if paragraph.field_media.entity.field_media_image.entity.fileuri %}
+          {% if {{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }} %}
             <img src="{{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }}" alt="A placeholder image">
-          {% else %}
-            {{ paragraph.field_media }}
           {% endif %}
         </div>
       </div>
