@@ -9,8 +9,33 @@
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
+      <header class="usa-card__header">
+        <h2 class="usa-card__heading">{{ paragraph.field_title.0.value }}</h2>
+      </header>
+      {% if paragraph.field_media.value %}
+      <div class="usa-card__media">
+        <div class="usa-card__img">
+{#          <img src="{{ file_url(paragraph.field_media.entity.field_media_image.entity.fileuri) }}" alt="A placeholder image">#}
+          {{ content.field_media }}
+        </div>
+      </div>
+      {% endif %}
+      <div class="usa-card__body">
+          {{ paragraph.field_description.0.value|raw }}
+      </div>
+      <div class="usa-card__footer">
+        {% if paragraph.field_button.value %}
+          {%
+            set button_classes = [
+            'usa-button',
+            paragraph.field_uswds_button_style.value,
+          ]
+          %}
+          <div class="margin-top-2"><a class="{{ button_classes | join(' ') }}" href="{{ paragraph.field_button.0.url }}">{{ paragraph.field_button.0.value.title }}</a></div>
+        {% endif %}
+      </div>
 
-      <div style="padding:0;">{{ content }}</div>
+
 
 
     {% endblock %}
