@@ -1,5 +1,7 @@
 .path-frontpage {
   main.usa-section {
-    padding-top: 0;
+    @include at-media("tablet") {
+      padding-top: 0;
+    }
   }
 }
