@@ -1,5 +1,5 @@
 @import "../effects/hover/hover";
-// Navigation dropdowns
+// Primary navigation dropdowns
 // ---------------------------------
 
 .usa-nav__primary {
@@ -41,4 +41,14 @@
 //Fix usa-navbar height in mobile / tablet
 .usa-header .usa-navbar {
   height: auto;
+}
+
+// Secondary navigation (user menu)
+// -------------------------------
+.usa-nav__secondary {
+  ul.usa-nav__secondary-links {
+    @include at-media('desktop') {
+      margin: 2rem 0 1rem;
+    }
+  }
 }
