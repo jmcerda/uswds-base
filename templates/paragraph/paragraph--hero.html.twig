@@ -4,18 +4,18 @@
       <div class="grid-container">
         <div class="usa-hero__callout">
           <h1 class="usa-hero__heading">
-            <span class="usa-hero__heading--alt">{{ content.field_uswds_title }}</span>
-            <span>{{ content.field_uswds_subtitle }}</span>
+            <span class="usa-hero__heading--alt">{{ content.field_title }}</span>
+            <span>{{ content.field_subtitle }}</span>
           </h1>
-          {{ content.field_uswds_body }}
-          {% if paragraph.field_uswds_button.value %}
+          {{ content.field_body }}
+          {% if paragraph.field_button.value %}
             {%
               set classes = [
               'usa-button',
-              paragraph.field_uswds_button_style.value,
+              paragraph.field_button_style.value,
               ]
             %}
-            <div{{ attributes.addClass('margin-top-2') }}><a{{ attributes.addClass(classes) }} href="{{ paragraph.field_uswds_button.0.value.uri }}">{{ paragraph.field_uswds_button.0.value.title }}</a></div>
+            <div{{ attributes.addClass('margin-top-2') }}><a{{ attributes.addClass(classes) }} href="{{ paragraph.field_button.0.value.uri }}">{{ paragraph.field_button.0.value.title }}</a></div>
           {% endif %}
         </div>
       </div>
