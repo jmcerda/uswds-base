@@ -28,7 +28,7 @@
           {%
             set button_classes = [
             'usa-button',
-            paragraph.field_uswds_button_style.value,
+            paragraph.field_button_style.value,
           ]
           %}
           <div class="margin-top-2"><a class="{{ button_classes | join(' ') }}" href="{{ paragraph.field_button.0.url }}">{{ paragraph.field_button.0.value.title }}</a></div>
