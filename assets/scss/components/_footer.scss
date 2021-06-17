@@ -1,4 +1,7 @@
 footer {
+  //.usa-footer__contact-info {
+  //  font-size: 1.25rem !important;
+  //}
   .usa-footer__secondary-section {
     nav {
       ul {
@@ -13,7 +16,7 @@ footer {
           }
         }
         li:last-child::after {
-          content: '';
+          content: none;
         }
       }
     }
