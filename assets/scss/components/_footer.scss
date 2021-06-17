@@ -15,8 +15,8 @@ footer {
             text-decoration: none;
           }
         }
-        li:last-child::after {
-          content: none;
+        li:last-child ::after {
+          content: '';
         }
       }
     }
