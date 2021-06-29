@@ -9,6 +9,9 @@ section.usa-hero {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+    .field--name-field-title {
+      margin-bottom: 0;
+   }
   }
   .slick__slide {
     height: 400px;
