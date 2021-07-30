@@ -79,30 +79,29 @@
          {% endif %}
 
       </div>
-     </div>
+    </div>
 
-     <div class="grid-row grid-gap">
+    <div class="grid-row grid-gap">
 
-      {% if page.sidebar_first %}
-        <aside class="tablet:grid-col-3">
-          {{ page.sidebar_first }}
-        </aside>
-      {% endif %}
+    {% if page.sidebar_first %}
+      <aside class="tablet:grid-col-3">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
 
-       <div class="region-content {{ content_class }}">
-         {{ page.content }}
-       </div>
+      <div class="region-content {{ content_class }}">
+       {{ page.content }}
+      </div>
 
-      {% if page.sidebar_second %}
-        <aside class="tablet:grid-col-3">
-          {{ page.sidebar_second }}
-        </aside>
-      {% endif %}
+    {% if page.sidebar_second %}
+      <aside class="tablet:grid-col-3">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
 
     </div>
-   </div>
-
-   </main>
+  </div>
+</main>
 
 <footer class="{{ footer_classes }}" role="contentinfo">
   <div class="grid-container usa-footer__return-to-top">
