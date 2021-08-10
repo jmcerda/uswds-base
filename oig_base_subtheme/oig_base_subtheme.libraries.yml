@@ -3,3 +3,9 @@ oig_base_subtheme:
   css:
     theme:
       assets/css/styles.css: {}
+  js:
+    /libraries/matchheight/dist/jquery.matchHeight-min.js: {}
+    /libraries/fitty/dist/fitty.min.js: {}
+    /themes/contrib/oig_base/assets/js/uswds.min.js: {}
+    /themes/contrib/oig_base/assets/js/custom.js: {}
+    /themes/contrib/oig_base/assets/js/fluidvids.js: { scope: footer }
