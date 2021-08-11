@@ -9,7 +9,10 @@ libraries:
   - oig_base_subtheme/oig_base_subtheme
 
 libraries-override:
-  oig_base/oig_base: false
+  oig_base/oig_base:
+    css:
+      theme:
+        assets/css/styles.css: false
 
 # Add the CSS to CKEditor, so that custom entries in "Style" will work.
 ckeditor_stylesheets:
