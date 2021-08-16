@@ -2,6 +2,10 @@ form.usa-form {
   max-width: 100%;
 }
 
+// USA Form Group temp fix for margin.
+.usa-form-group {
+  margin-top: 0rem;
+}
 
 // Header search form
 #views-exposed-form-search-page-search {
