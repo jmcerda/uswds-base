@@ -5,13 +5,14 @@ core: 8.x
 base theme: oig_base
 
 # The following overrides will work if css is compiled to the root, update if different.
+libraries:
+  - oig_base_subtheme/oig_base_subtheme
+
 libraries-override:
   oig_base/oig_base:
     css:
       theme:
-        assets/css/uswds.css: assets/css/styles.css
-    js:
-      assets/js/uswds.min.js: assets/js/uswds.min.js
+        assets/css/styles.css: false
 
 # Add the CSS to CKEditor, so that custom entries in "Style" will work.
 ckeditor_stylesheets:
