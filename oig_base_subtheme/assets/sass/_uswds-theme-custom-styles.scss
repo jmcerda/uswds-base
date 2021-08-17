@@ -19,3 +19,169 @@ i.e.
 @include u-padding-right('05');
 ----------------------------------------
 */
+
+.block-views-exposed-filter-blockreports-block-reports .usa-accordion__content {
+   margin-top: 0;
+   overflow: hidden;
+   padding-top: 0;
+}
+
+.fas {font-size: 2em;}
+
+.usa-form-group { margin-top:0; }
+
+// must be above page-title class so it can be overwritten
+.field--name-title {
+   color: $theme-color-secondary-family;
+}
+
+.page-title .field--name-title, .page-title, h1.page-title {
+   color: $theme-color-primary-family;
+   font-size: 2.5rem;
+}
+
+.usa-button--accent-cool, .usa-button--accent-cool:visited {
+   background-color: $theme-color-primary-family;
+   color: #FFFFFF;
+   margin-top: 1rem;
+}
+
+.usa-button--accent-cool:hover, .usa-button--accent-cool:active {
+   background-color: $theme-color-secondary-family;
+}
+
+.usa-footer__logo-img {
+    max-width: 20rem;
+}
+
+.usa-form-group {
+   margin-top: 0;
+}
+
+.usa-logo__text a, .slogan_text {
+   color: $theme-color-primary-family;
+}
+
+.usa-prose>h1, .usa-prose>h2, .usa-prose>h3, .usa-prose>h4, .usa-prose>h5, .usa-prose>h6 {
+   color: $theme-color-secondary-family;
+}
+
+.usa-prose h2 {
+   margin-bottom: 0;
+   margin-top: 1.4rem;
+}
+
+.usa-prose h2 + p, .usa-prose h2 + article + p {
+   margin-top: 0.2rem;
+}
+
+.usa-prose a, .usa-prose a:visited, em.usa-logo__text {
+   color: $theme-color-secondary-family;
+}
+
+.usa-prose a:active, .usa-prose a:hover {
+   color: $theme-color-primary-family !important;
+   text-decoration: none !important;
+}
+
+.usa-select.chosen-container {
+  background: transparent none;
+  border: none;
+  padding: 0;
+  height: auto;
+}
+
+.view-frontpage .view-header h2 {
+   border-bottom: 1px grey solid;
+   display: block;
+   margin-top: 3rem;
+   padding-bottom: 1rem;
+}
+
+.view-header h2 {
+   color: $theme-color-primary-family;
+}
+
+button#whistle-blower-button{
+   margin-bottom: .3rem;
+}
+
+footer .usa-footer__secondary-section nav ul li:last-child ::after {
+   content: "  ";
+}
+
+h2.usa-card__heading {
+   font-size: 1.1rem;
+}
+
+main.usa-section {
+    padding-top: 0rem;
+}
+
+.usa-footer__logo-heading {font-size: 1.3em;}
+.usa-footer__contact-heading {font-size: 1.1em;}
+
+
+
+@include at-media("tablet") {
+   // update width for paragraph text to allow to fill the container so it is extends to the end of the container
+   .usa-prose>p {
+      line-height: 1.4;
+      max-width: 100%;
+   }
+   #logo.usa-logo {
+      display: flex;
+      #brand-text {
+         font-size: 1.9rem;
+         .slogan_text {
+            font-size: 1.3rem;
+         }
+      }
+   }
+   .region-footer-menu .grid-row.grid-gap>* {
+      padding-left: 0rem;
+      padding-right: 0rem;
+   }
+}
+
+@media (min-width: 30em) {
+   .usa-footer--big .usa-footer__nav {
+      padding-top: .9rem;
+   }
+}
+
+@media (min-width: 40em) {
+   .usa-section {
+      padding-bottom: 0;
+      padding-top: 0;
+   }
+}
+
+@media (min-width: 64em) {
+   .usa-nav__primary>.usa-nav__primary-item {
+      font-size: .93rem;
+      line-height: .9;
+   }
+   .region-footer-secondary {
+      text-align: center;
+      .menu-item {
+         a, a:link, a:visited {
+         text-decoration: underline;
+         }
+         a:active, a:hover {
+         text-decoration: none;
+         }
+      }
+   }
+   #block-whistleblowerbutton .paragraph {margin-top: 0;}
+   .usa-header--extended .usa-logo {
+      font-size: 2.13rem;
+      margin: 2rem 0 1.5rem;
+      max-width: 70%;
+   }
+   // move banner on homepage up closer to nav
+   div.region-hero {
+      margin-top:-3rem !important;
+      padding-top:-3rem !important;
+   }
+}
