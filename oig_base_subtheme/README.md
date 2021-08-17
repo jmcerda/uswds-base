@@ -9,9 +9,9 @@ Legacy "Getting Started" guide - https://www.drupalgovcon.org/sites/default/file
 
 ## Custom Twig Variables:
 {{ oig_base_theme_path }} - use to get the theme path for oig_base theme. It is currently used for the image_path of the flag icon in USWDS Govt Banner
+{{ oig_base_theme_img_path }} - use to get the image path for oig_base theme.
 
 ## Workflow Installation
-
 If you've never installed Gulp, you'll need to install the Gulp command line interface:
 
 ```bash

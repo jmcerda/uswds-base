@@ -13,6 +13,7 @@
 function oig_base_preprocess_page(&$variables) {
   // Set the path to the base theme.
   $variables['oig_base_theme_path'] = base_path() . drupal_get_path('theme', 'oig_base');
+  $variables['oig_base_theme_img_path'] = base_path() . drupal_get_path('theme', 'oig_base') . '/assets/img';
 
   // Show the official U.S. Government banner?
   if (isset($variables['government_banner'])) {
