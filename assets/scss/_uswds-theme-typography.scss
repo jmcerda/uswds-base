@@ -65,9 +65,9 @@ unclassed elements:
 ----------------------------------------
 */
 
-$theme-global-paragraph-styles: false;
-$theme-global-link-styles: false;
-$theme-global-content-styles: false;
+$theme-global-paragraph-styles: false !default;
+$theme-global-link-styles: false !default;
+$theme-global-content-styles: false !default;
 
 /*
 ----------------------------------------
@@ -77,7 +77,7 @@ Relative font file path
 ----------------------------------------
 */
 
-$theme-font-path: "../fonts";
+$theme-font-path: "../fonts" !default;
 
 /*
 ----------------------------------------
@@ -155,22 +155,22 @@ $theme-typeface-tokens.
 */
 
 // condensed
-$theme-font-type-cond: false;
+$theme-font-type-cond: false !default;
 
 // icon
-$theme-font-type-icon: false;
+$theme-font-type-icon: false !default;
 
 // language-specific
-$theme-font-type-lang: false;
+$theme-font-type-lang: false !default;
 
 // monospace
-$theme-font-type-mono: "roboto-mono";
+$theme-font-type-mono: "roboto-mono" !default;
 
 // sans-serif
-$theme-font-type-sans: "source-sans-pro";
+$theme-font-type-sans: "source-sans-pro" !default;
 
 // serif
-$theme-font-type-serif: "merriweather";
+$theme-font-type-serif: "merriweather" !default;
 
 /*
 ----------------------------------------
