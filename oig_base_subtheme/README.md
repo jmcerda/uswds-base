@@ -7,6 +7,8 @@ USWDS Gulp pipeline - https://github.com/uswds/uswds-gulp
 USWDS Color Picker - https://civicactions.github.io/uswds-color-tool/
 Legacy "Getting Started" guide - https://www.drupalgovcon.org/sites/default/files/session/slides/2020-06/pres_Drupal-GovCon_bseek_dboeger_USWDS-%26-Drupal_061220.pdf
 
+## Custom Twig Variables:
+{{ oig_base_theme_path }} - use to get the theme path for oig_base theme. It is currently used for the image_path of the flag icon in USWDS Govt Banner
 
 ## Workflow Installation
 
@@ -23,32 +25,27 @@ npm i
 ```
 
 ## Usage
+Copy oig_base_subtheme from oig_base to /docroot/themes/custom/
 
-Initialize your USWDS project. Initialization does the following:
+Rename oig_base_subtheme directory, oig_base.info.yml, and oig_base_subtheme.libraries.yml to the name of your subtheme.
 
-- Copies settings files and the USWDS base Sass file to your project Sass directory
-- Copies images, fonts, and javascript files to the directories you set above
-- Compiles the USWDS Sass into a usable CSS file, called `styles.css` by default
+Rename oig_base_subtheme to your subtheme in oig_base.info.yml, and oig_base_subtheme.libraries.yml
 
-Intitialize your USWDS project by running the following command:
+Edit your customzied USWDS settings  `_uswds-theme-custom-settings.scss` file.
+
+Edit your customzied USWDS styles  `_uswds-theme-custom-styles.scss` file.
+
+Compile any changes manually with
 
 ```bash
-gulp init
+gulp build-sass
 ```
 
----
-
-Update the path for images in `_uswds-theme-general.scss` to be `../img`
-
-Update the path for fonts in `_uswds-theme-typography.scss` to be `../fonts`
-
-Edit your USWDS settings in the new settings files and add custom Sass to the new `_uswds-theme-custom-styles.scss` file. Watch these files and compile any changes with
+Watch these files and compile automatically any changes with
 
 ```bash
 gulp watch
 ```
-
-Now you can edit the USWDS settings located in the sass directory that was added in the root of the theme.
 
 Continue normal theme development.
 
