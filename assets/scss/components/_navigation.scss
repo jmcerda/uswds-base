@@ -46,6 +46,9 @@
 // Secondary navigation (user menu)
 // -------------------------------
 .usa-nav__secondary {
+  @include at-media('desktop') {
+    bottom: 8rem;
+  }
   ul.usa-nav__secondary-links {
     @include at-media('desktop') {
       margin-bottom: 1rem;
