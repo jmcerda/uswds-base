@@ -33,7 +33,7 @@ Rename oig_base_subtheme to your subtheme in oig_base.info.yml, and oig_base_sub
 
 Edit your customzied USWDS settings  `_uswds-theme-custom-settings.scss` file.
 
-Edit your customzied USWDS styles  `_uswds-theme-custom-styles.scss` file.
+Edit your customzied USWDS styles  `_uswds-theme-custom-styles.scss` file. Make sure to use design tokens. (https://designsystem.digital.gov/design-tokens/color/theme-tokens/)
 
 Compile any changes manually with
 

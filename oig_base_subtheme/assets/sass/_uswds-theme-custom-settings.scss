@@ -72,6 +72,9 @@ $theme-font-type-sans: "source-sans-pro";
 $theme-font-type-serif: "merriweather";
 
 // Colors Settings
+// Make sure to use theme tokens in your custom styles and not the color variables
+/* https://designsystem.digital.gov/design-tokens/color/theme-tokens/ */
+
 // Base colors
 $theme-color-base-family:           'gray';
 // Primary colors
