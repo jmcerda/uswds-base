@@ -47,7 +47,7 @@
 // -------------------------------
 .usa-nav__secondary {
   @include at-media('desktop') {
-    bottom: 8rem;
+    bottom: 6.5rem;
   }
   ul.usa-nav__secondary-links {
     @include at-media('desktop') {
