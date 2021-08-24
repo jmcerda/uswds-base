@@ -16,7 +16,7 @@
 
   Drupal.behaviors.thatsNotYoChild = {
     attach: function (context, settings) {
-      $(context).on('load', function(){
+      $(window).on('load', function(){
         var element = $(".cta-content:not(.cta-processed)", context);
         if (element.length) {
           thatsNotYoChild(element[0]);
