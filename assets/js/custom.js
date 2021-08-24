@@ -14,4 +14,10 @@
     },
   };
 
+  Drupal.behaviors.ThatsNotYoChild = {
+    attach: function (context, settings) {
+      thatsNotYoChild('cta');
+    },
+  };
+
 })(jQuery);
