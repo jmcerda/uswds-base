@@ -6,7 +6,10 @@ form.usa-form {
 .usa-form-group {
   margin-top: 0rem;
 }
-#views-exposed-form-reports-block-reports .usa-form-group, #views-exposed-form-reports-page-reports-all .usa-form-group, #views-exposed-form-reports-page-reports-other .usa-form-group {
+#views-exposed-form-reports-block-reports .usa-form-group,
+#views-exposed-form-reports-page-reports-all .usa-form-group,
+#views-exposed-form-reports-page-reports-other .usa-form-group,
+.webform-submission-form .usa-form-group {
   margin-top: 1em;
 }
 
