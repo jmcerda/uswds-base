@@ -9,4 +9,4 @@ oig_base:
     assets/js/uswds.min.js: {}
     assets/js/custom.js: {}
     assets/js/fluidvids.js: { scope: footer }
-    assets/js/ThatsNotYoChild.js: { scope: footer }
+#    assets/js/ThatsNotYoChild.js: { scope: footer }
