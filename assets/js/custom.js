@@ -14,9 +14,12 @@
     },
   };
 
-  Drupal.behaviors.ThatsNotYoChild = {
+  Drupal.behaviors.thatsNotYoChild = {
     attach: function (context, settings) {
-      thatsNotYoChild('cta');
+      var element = $(".cta-content", context);
+      if (element.length) {
+        thatsNotYoChild(element[0]);
+      }
     },
   };
 

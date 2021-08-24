@@ -5,9 +5,9 @@ This is a hacky workaround to let you use opacity on any element and prevent the
 Works in IE8+.
 If anyone can get line 23 working in IE7, it will be fully cross-browser.
 */
-function thatsNotYoChild(parentID) {
+function thatsNotYoChild(parent) {
 
-  var parent           = document.getElementById(parentID),
+  var
     children         = parent.innerHTML,
     wrappedChildren  = '<div id="children" class="children">' + children + '</div>',
     x, y, w, newParent, clonedChild, clonedChildOld;

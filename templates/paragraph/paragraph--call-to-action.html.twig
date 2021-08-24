@@ -28,7 +28,7 @@
 
       <section class="{{ section_classes | join(' ') }}" style="{{ background_style }}">
         <div class="grid-container">
-          <div id="cta" class="cta-content {{ content_background_classes | join(' ') }}" style="{{ content_background_opacity }}">
+          <div class="cta-content {{ content_background_classes | join(' ') }}" style="{{ content_background_opacity }}">
             <h2 class="font-heading-xl">{{ content.field_title }}</h2>
             <div class="usa-intro">{{ content.field_body }}</div>
             {% if paragraph.field_link.value %}
