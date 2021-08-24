@@ -16,9 +16,10 @@
 
   Drupal.behaviors.thatsNotYoChild = {
     attach: function (context, settings) {
-      var element = $(".cta-content", context);
+      var element = $(".cta-content:not(.cta-processed)", context);
       if (element.length) {
         thatsNotYoChild(element[0]);
+        element.addClass("cta-processed");
       }
     },
   };
