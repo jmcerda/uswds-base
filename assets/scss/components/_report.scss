@@ -25,7 +25,7 @@
       color: color('base-darker');
       display: inline-flex;
       align-items: center;
-      padding-left: 1em;
+      padding: 1em;
       text-align: center;
       border-left: 1px solid color('base-lighter');
       @include at-media('mobile-lg') {
