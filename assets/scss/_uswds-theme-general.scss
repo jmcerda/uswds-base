@@ -25,7 +25,7 @@ Relative image file path
 ----------------------------------------
 */
 
-$theme-image-path: "../img";
+$theme-image-path: "../img" !default;
 
 /*
 ----------------------------------------
@@ -38,8 +38,8 @@ Show updates and notifications.
 ----------------------------------------
 */
 
-$theme-show-compile-warnings: true;
-$theme-show-notifications: true;
+$theme-show-compile-warnings: true !default;
+$theme-show-notifications: true !default;
 
 /*
 ----------------------------------------
