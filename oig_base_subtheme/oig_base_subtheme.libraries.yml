@@ -4,5 +4,5 @@ oig_base_subtheme:
     theme:
       assets/css/styles.css: {}
   js:
-    assets/css/custom.js: {}
+    assets/js/custom.js: {}
 
