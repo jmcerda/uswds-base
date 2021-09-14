@@ -19,17 +19,19 @@ npm install gulp-cli -g
 ```
 
 Install packages
+npm install autoprefixer gulp gulp-replace sass gulp-sass gulp-sourcemaps gulp-rename gulp-svg-sprite gulp-postcss postcss postcss-csso uswds uswds-gulp@github:uswds/uswds-gulp --save-dev
 
-```bash
-npm i
-```
+
+Copy gulpfile.js to the subtheme root
+cp node_modules/uswds-gulp/gulpfile.js .
+
 
 ## Usage
 Copy oig_base_subtheme from oig_base to /docroot/themes/custom/
 
-Rename oig_base_subtheme directory, oig_base.info.yml, and oig_base_subtheme.libraries.yml to the name of your subtheme.
+Edit oig_base.info.yml, and oig_base_subtheme.libraries.yml files and replace oig_base references to the name of your subtheme.
 
-Rename oig_base_subtheme to your subtheme in oig_base.info.yml, and oig_base_subtheme.libraries.yml
+Rename the following directories: oig_base_subtheme directory, oig_base.info.yml, and oig_base_subtheme.libraries.yml from "oig_base_" to the name of your "subtheme_".
 
 Edit your customzied USWDS settings  `_uswds-theme-custom-settings.scss` file.
 
