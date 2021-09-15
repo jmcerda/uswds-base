@@ -19,7 +19,7 @@ npm install gulp-cli -g
 ```
 
 Install packages
-npm install autoprefixer gulp gulp-replace sass gulp-sass gulp-sourcemaps gulp-rename gulp-svg-sprite gulp-postcss postcss postcss-csso uswds uswds-gulp@github:uswds/uswds-gulp --save-dev
+npm i
 
 ## Usage
 Copy oig_base_subtheme from oig_base to /docroot/themes/custom/
