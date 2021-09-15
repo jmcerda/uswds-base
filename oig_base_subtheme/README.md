@@ -19,17 +19,14 @@ npm install gulp-cli -g
 ```
 
 Install packages
-
-```bash
 npm i
-```
 
 ## Usage
 Copy oig_base_subtheme from oig_base to /docroot/themes/custom/
 
-Rename oig_base_subtheme directory, oig_base.info.yml, and oig_base_subtheme.libraries.yml to the name of your subtheme.
+Edit oig_base.info.yml, and oig_base_subtheme.libraries.yml files and replace oig_base references to the name of your subtheme.
 
-Rename oig_base_subtheme to your subtheme in oig_base.info.yml, and oig_base_subtheme.libraries.yml
+Rename the following directories: oig_base_subtheme directory, oig_base.info.yml, and oig_base_subtheme.libraries.yml from "oig_base_" to the name of your "subtheme_".
 
 Edit your customzied USWDS settings  `_uswds-theme-custom-settings.scss` file.
 
