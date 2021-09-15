@@ -21,45 +21,6 @@ npm install gulp-cli -g
 Install packages
 npm install autoprefixer gulp gulp-replace sass gulp-sass gulp-sourcemaps gulp-rename gulp-svg-sprite gulp-postcss postcss postcss-csso uswds uswds-gulp@github:uswds/uswds-gulp --save-dev
 
-
-Copy gulpfile.js to the subtheme root
-cp node_modules/uswds-gulp/gulpfile.js .
-
-Edit gulpfile.js
-replace
-// Project Sass source directory
-const PROJECT_SASS_SRC = "./path/to/project/sass";
-
-// Images destination
-const IMG_DEST = "./path/to/images/destination";
-
-// Fonts destination
-const FONTS_DEST = "./path/to/fonts/destination";
-
-// Javascript destination
-const JS_DEST = "./path/to/js/destination";
-
-// Compiled CSS destination
-const CSS_DEST = "./path/to/css/destination";
-
-with
-
- // Project Sass source directory
-const PROJECT_SASS_SRC = "./assets/sass";
-
-// Images destination
-const IMG_DEST = "./assets/img";
-
-// Fonts destination
-const FONTS_DEST = "./assets/fonts";
-
-// Javascript destination
-const JS_DEST = "./assets/js";
-
-// Compiled CSS destination
-const CSS_DEST = "./assets/css";
-
-
 ## Usage
 Copy oig_base_subtheme from oig_base to /docroot/themes/custom/
 
