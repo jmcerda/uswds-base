@@ -3,22 +3,26 @@
     'paragraph',
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    'usa-alert',
+    paragraph.field_type.value,
   ]
 %}
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
+
     {% block content %}
+      <div class="usa-alert__body">
+        {% if uswds_grid_class %}
+        <div class="{{ uswds_grid_class }}">
+        {% endif %}
 
-      {% if uswds_grid_class %}
-      <div class="{{ uswds_grid_class }}">
-      {% endif %}
+        {{ content }}
 
-      {{ content }}
-
-      {% if uswds_grid_class %}
+        {% if uswds_grid_class %}
+        </div>
+        {% endif %}
       </div>
-      {% endif %}
-
     {% endblock %}
+
   </div>
 {% endblock paragraph %}
