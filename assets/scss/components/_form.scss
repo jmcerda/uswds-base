@@ -51,5 +51,26 @@ form.usa-form {
       }
     }
   }
+}
 
+// USA Form Group temp fix for margin.
+.usa-form-group {
+  margin-top: 0rem;
+}
+form.webform-submission-form {
+  .usa-form-group {
+    margin-top: inherit;
+    .tabledrag-toggle-weight-wrapper {
+      display: none;
+    }
+  }
+  fieldset.radios--wrapper {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+  label.usa-checkbox__label{
+    span.file {
+      display: inline;
+    }
+  }
 }
