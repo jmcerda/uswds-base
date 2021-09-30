@@ -55,3 +55,15 @@
     }
   }
 }
+nav.usa-nav {
+  .usa-nav__inner {
+    display: flex;
+    flex-direction: column;
+    .region-primary-menu {
+      order: 2;
+    }
+    .usa-nav__secondary {
+      order: 1;
+    }
+  }
+}

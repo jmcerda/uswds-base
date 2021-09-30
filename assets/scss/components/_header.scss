@@ -14,6 +14,13 @@ header.usa-banner__header--expanded {
   @include at-media("tablet") {
     display: flex;
     #brand-text {
+
+    }
+  }
+  #brand-text {
+    display: inline-block;
+    vertical-align: middle;
+    @include at-media("tablet") {
       line-height: 1;
       margin-left: 20px;
       align-self: center;
@@ -21,7 +28,17 @@ header.usa-banner__header--expanded {
         font-size: 1.5rem;
       }
     }
-
+  };
+  .brand-logo {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: .5rem;
+    img {
+      height: 3rem;
+      @include at-media("tablet") {
+        height: inherit;
+      }
+    }
   }
 }
 
