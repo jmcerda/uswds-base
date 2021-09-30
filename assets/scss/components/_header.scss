@@ -13,13 +13,9 @@ header.usa-banner__header--expanded {
 #logo.usa-logo {
   @include at-media("tablet") {
     display: flex;
-    #brand-text {
-
-    }
+    align-items: center;
   }
   #brand-text {
-    display: inline-block;
-    vertical-align: middle;
     @include at-media("tablet") {
       line-height: 1;
       margin-left: 20px;
@@ -30,8 +26,6 @@ header.usa-banner__header--expanded {
     }
   };
   .brand-logo {
-    display: inline-block;
-    vertical-align: middle;
     padding-right: .5rem;
     img {
       height: 3rem;
