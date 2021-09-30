@@ -46,18 +46,23 @@
 // Secondary navigation (user menu)
 // -------------------------------
 .usa-nav__secondary {
-  @include at-media('desktop') {
+  @include at-media("desktop") {
     bottom: 6.5rem;
   }
   ul.usa-nav__secondary-links {
-    @include at-media('desktop') {
+    @include at-media("desktop") {
       margin-bottom: 1rem;
     }
   }
 }
+
+// Mobile nav reorder items.
 nav.usa-nav {
   .usa-nav__inner {
     display: flex;
+    @include at-media("tablet") {
+      display: block;
+    }
     flex-direction: column;
     .region-primary-menu {
       order: 2;
@@ -65,5 +70,13 @@ nav.usa-nav {
     .usa-nav__secondary {
       order: 1;
     }
+  }
+}
+
+
+// Mobile nav close button position.
+.usa-nav.is-visible {
+  .usa-nav__close {
+    margin: -.75rem -.5rem -1rem auto;
   }
 }
