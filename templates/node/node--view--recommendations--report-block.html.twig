@@ -84,7 +84,7 @@
 {#    </h2>#}
     <h4{{ title_attributes.addClass('usa-accordion__heading') }}>
       <button class="usa-accordion__button">
-        {{ label }}
+        {{ content.field_number }} - {{ content.field_status }}
       </button>
     </h4>
   {% endif %}
@@ -106,7 +106,7 @@
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
     {% endif %}
 
-    {{ content }}
+    {{ content|without('field_status, field_number') }}
   </div>
 
 </article>
