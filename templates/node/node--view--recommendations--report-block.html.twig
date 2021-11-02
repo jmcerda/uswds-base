@@ -79,9 +79,14 @@
 
   {{ title_prefix }}
   {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+{#    <h2>#}
+{#      <a href="{{ url }}" rel="bookmark">{{ label }}</a>#}
+{#    </h2>#}
+    <h4{{ title_attributes.addClass('usa-accordion__heading') }}>
+      <button class="usa-accordion__button" aria-expanded="false">
+        {{ label }}
+      </button>
+    </h4>
   {% endif %}
   {{ title_suffix }}
 
@@ -95,7 +100,7 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes }}>
+  <div{{ content_attributes.addClass('usa-accordion__content', 'usa-prose') }}>
 
     {% if not node.isPublished() %}
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
