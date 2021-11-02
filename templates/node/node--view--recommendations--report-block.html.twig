@@ -106,7 +106,7 @@
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
     {% endif %}
 
-    {{ content|without('field_status, field_number') }}
+    {{ content|without('field_status', 'field_number') }}
   </div>
 
 </article>
