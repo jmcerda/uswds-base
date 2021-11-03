@@ -83,7 +83,7 @@
 {#      <a href="{{ url }}" rel="bookmark">{{ label }}</a>#}
 {#    </h2>#}
     <h4 class="usa-accordion__heading">
-      <button class="usa-accordion__button" aria-expanded="{{ expanded }}">
+      <button class="usa-accordion__button" aria-expanded="false" aria-controls="{{ controls }}">
         <span>{{ content.field_number }} - {{ content.field_status }}</span>
       </button>
     </h4>
@@ -100,7 +100,7 @@
 {#    </footer>#}
 {#  {% endif %}#}
 
-  <div class="usa-accordion__content usa-prose">
+  <div id="{{ controls }}" class="usa-accordion__content usa-prose">
 
     {% if not node.isPublished() %}
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
