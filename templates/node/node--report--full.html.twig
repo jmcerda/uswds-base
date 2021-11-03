@@ -115,7 +115,7 @@
 {#        <span>{{ content.field_recommendations }}</span>#}
 {#      </div>#}
 {#    {% endif %}#}
-    {% if logged_in and user.hasRole(content_creator') %}
+    {% if logged_in and user.hasRole('content_creator') %}
       <a href="/node/add/recommendation" aria-controls="example-modal-2" data-open-modal><button class="usa-button usa-button--outline">Add Recommendation</button></a>
     {% endif %}
   </div>
