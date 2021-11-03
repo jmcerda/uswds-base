@@ -116,7 +116,9 @@
 {#      </div>#}
 {#    {% endif %}#}
     {% if logged_in and user.hasRole('content_creator') %}
-      <a href="/node/add/recommendation" aria-controls="example-modal-2" data-open-modal><button class="usa-button usa-button--outline">Add Recommendation</button></a>
+    <div class="report-action margin-top-2em">
+      <a href="/node/add/recommendation" class="usa-button usa-button--outline" aria-controls="example-modal-2" data-open-modal>Add Recommendation</a>
+    </div>
     {% endif %}
   </div>
 
