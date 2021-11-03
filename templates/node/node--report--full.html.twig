@@ -108,14 +108,16 @@
       <a href="{{ node.field_oversight_url.0.url }}" target="_blank">View report on Oversight.gov</a>
     </div>
     {% endif %}
-    {% if node.field_recommendations.0.target_id %}
-      <h2>Open Recommendations</h2>
-      <div class="recommendation-field-container grid-container">
-        <h3>{{ content.field_number_of_recommendations }} {% if node.field_number_of_recommendations.0.value == 1 %} <span> recommendation</span> {% else %} <span> recommendations</span> {% endif %}</h3>
-        <span>{{ content.field_recommendations }}</span>
-      </div>
+{#    {% if node.field_recommendations.0.target_id %}#}
+{#      <h2>Open Recommendations</h2>#}
+{#      <div class="recommendation-field-container grid-container">#}
+{#        <h3>{{ content.field_number_of_recommendations }} {% if node.field_number_of_recommendations.0.value == 1 %} <span> recommendation</span> {% else %} <span> recommendations</span> {% endif %}</h3>#}
+{#        <span>{{ content.field_recommendations }}</span>#}
+{#      </div>#}
+{#    {% endif %}#}
+    {% if logged_in and is_granted('content_creator') %}
+      <a href="/node/add/recommendation" aria-controls="example-modal-2" data-open-modal><button class="usa-button usa-button--outline">Add Recommendation</button></a>
     {% endif %}
-
   </div>
 
 </article>
