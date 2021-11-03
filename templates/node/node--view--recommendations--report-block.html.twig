@@ -75,7 +75,7 @@
 {% if not node.isPublished() %}
   {% set attributes = attributes.addClass('node--unpublished') %}
 {% endif %}
-<article{{ attributes }}>
+{#<article{{ attributes }}>#}
 
   {{ title_prefix }}
   {% if not page %}
@@ -84,23 +84,23 @@
 {#    </h2>#}
     <h4{{ title_attributes.addClass('usa-accordion__heading') }}>
       <button class="usa-accordion__button">
-        {{ content.field_number }} - {{ content.field_status }}
+        <span>{{ content.field_number }} - {{ content.field_status }}</span>
       </button>
     </h4>
   {% endif %}
   {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
+{#  {% if display_submitted %}#}
+{#    <footer>#}
+{#      {{ author_picture }}#}
+{#      <div{{ author_attributes }}>#}
+{#        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}#}
+{#        {{ metadata }}#}
+{#      </div>#}
+{#    </footer>#}
+{#  {% endif %}#}
 
-  <div{{ content_attributes.addClass('usa-accordion__content', 'usa-prose') }}>
+  <div class="usa-accordion__content usa-prose">
 
     {% if not node.isPublished() %}
     <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
@@ -109,4 +109,4 @@
     {{ content|without('field_status', 'field_number') }}
   </div>
 
-</article>
+{#</article>#}
