@@ -119,20 +119,17 @@
 
 </article>
 
-<h2 class="font-heading-lg">Recommendations</h2>
-{% if node.field_recommendations.0.target_id %}
-  <div class="margin-top-4">
+<div class="margin-top-4">
+  <h2 class="font-heading-lg">Recommendations</h2>
+  {% if node.field_recommendations.0.target_id %}
     <h2 class="font-heading-lg">Recommendations</h2>
     {{ drupal_view('recommendations', 'report_block') }}
+  {% else %}
+    <h3 class="font-heading-sm">No recommendations at this time.</h3>
+  {% endif %}
+  {% if logged_in  %}
+  <div class="report-action margin-top-4">
+    <a href="/node/add/recommendation?edit[field_report][widget][0][target_id]={{ node.id }}"><button class="usa-button usa-button--outline" aria-controls="add-rec-modeal" data-open-modal>Add Recommendation</button></a>
   </div>
-{% else %}
-  <div class="margin-top-4">
-    <h3 class="font-heading-lg">No recommendations at this time.</h3>
-  </div>
-{% endif %}
-
-{% if logged_in  %}
-<div class="report-action margin-top-4">
-  <a href="/node/add/recommendation?edit[field_report][widget][0][target_id]={{ node.id }}"><button class="usa-button usa-button--outline" aria-controls="add-rec-modeal" data-open-modal>Add Recommendation</button></a>
+  {% endif %}
 </div>
-{% endif %}
