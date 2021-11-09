@@ -119,10 +119,15 @@
 
 </article>
 
+<h2 class="font-heading-lg">Recommendations</h2>
 {% if node.field_recommendations.0.target_id %}
   <div class="margin-top-4">
     <h2 class="font-heading-lg">Recommendations</h2>
     {{ drupal_view('recommendations', 'report_block') }}
+  </div>
+{% else %}
+  <div class="margin-top-4">
+    <h3 class="font-heading-lg">No recommendations at this time.</h3>
   </div>
 {% endif %}
 
