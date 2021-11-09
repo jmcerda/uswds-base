@@ -115,11 +115,17 @@
 {#        <span>{{ content.field_recommendations }}</span>#}
 {#      </div>#}
 {#    {% endif %}#}
-    {% if logged_in  %}
-    <div class="report-action margin-top-2em">
-      <a href="/node/add/recommendation?edit[field_report][widget][0][target_id]={{ node.id }}"><button class="usa-button usa-button--outline" aria-controls="add-rec-modeal" data-open-modal>Add Recommendation</button></a>
-    </div>
-    {% endif %}
   </div>
 
 </article>
+
+{% if node.field_recommendations %}
+  <h2 class="font-heading-lg">Recommendations</h2>
+  {{ drupal_view('recommendations', 'report_block') }}
+{% endif %}
+
+{% if logged_in  %}
+<div class="report-action margin-top-2em">
+  <a href="/node/add/recommendation?edit[field_report][widget][0][target_id]={{ node.id }}"><button class="usa-button usa-button--outline" aria-controls="add-rec-modeal" data-open-modal>Add Recommendation</button></a>
+</div>
+{% endif %}
