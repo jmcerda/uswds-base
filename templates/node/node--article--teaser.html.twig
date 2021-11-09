@@ -76,6 +76,10 @@
   {% set attributes = attributes.addClass('node--unpublished') %}
 {% endif %}
 <article{{ attributes }}>
+  <img
+    class="usa-collection__img"
+    src="{{ content.field_teaser_image }}"
+  />
   <div class="usa-collection__body">
     <div class="usa-collection__meta" aria-label="More information">
       <div class="usa-collection__meta-item">
@@ -90,7 +94,6 @@
     {% endif %}
     {{ title_suffix }}
     <div class="usa-collection__meta" aria-label="More information">
-      {{ content.field_article_type }}
       {% if display_submitted %}
         <div class="usa-collection__meta-item">
           <footer>
@@ -108,9 +111,10 @@
       {% if not node.isPublished() %}
       <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
       {% endif %}
-      <p class="usa-collection__description">{{ content.body }}</p>
+      <p class="usa-collection__description">{{ content.field_teaser_content }}</p>
       <div class="usa-collection__meta" aria-label="Topics">
-        {{ content|without ('field_date', 'field_article_type', 'body') }}
+        {{ content.field_article_type }}
+        {{ content.field_tags }}
       </div>
     </div>
 
