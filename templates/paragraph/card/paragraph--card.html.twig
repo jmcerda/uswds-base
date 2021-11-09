@@ -19,10 +19,10 @@
           {{ content.field_media }}
         </div>
       </div>
-      {% elseif paragraph.field_icon.value %}
+      {% elseif paragraph.field_icon.0.value %}
       <div class="usa-card__media">
         <div class="usa-card__img">
-          {{ content.field_icon }}
+          {{ paragraph.field_icon }}
         </div>
       </div>
       {% endif %}
