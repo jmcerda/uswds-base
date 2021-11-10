@@ -75,7 +75,7 @@
 {% if not node.isPublished() %}
   {% set attributes = attributes.addClass('node--unpublished') %}
 {% endif %}
-<article{{ attributes }}>
+<article{{ attributes.addClass('width-full') }}>
   <div class="usa-collection__item">
     <div class="usa-collection__body">
       <div class="usa-collection__meta" aria-label="More information">

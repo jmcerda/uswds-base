@@ -75,7 +75,7 @@
 {% if not node.isPublished() %}
   {% set attributes = attributes.addClass('node--unpublished') %}
 {% endif %}
-<article{{ attributes }}>
+<article{{ attributes.addClass('width-full') }}>
   <div class="usa-collection__item">
     {% if node.field_teaser_image.entity.field_media_image.entity.fileuri %}
     <img class="usa-collection__img" src="{{ file_url(node.field_teaser_image.entity.field_media_image.entity.fileuri) }}" alt="{{ node.field_teaser_image.entity.field_media_image.entity.alt }}">
