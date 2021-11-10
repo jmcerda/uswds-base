@@ -111,3 +111,9 @@ $collection-thumb-margin: 2;
     @include u-padding-top(1);
   }
 }
+
+.usa-collection {
+  .usa-collection__item {
+    margin-bottom: 2em;
+  }
+}
