@@ -5,12 +5,16 @@
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     'usa-card__container',
   ]
+]
+%}
+{%
   set classes_bl = [
-  'paragraph',
-  'paragraph--type--' ~ paragraph.bundle|clean_class,
-  view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-  'usa-card__container',
-  'usa-card__container__borderless',
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    'usa-card__container',
+    'usa-card__container__borderless',
+  ]
 ]
 %}
 {% block paragraph %}
