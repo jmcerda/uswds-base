@@ -77,13 +77,17 @@
 {% endif %}
 <article{{ attributes }}>
   <div class="usa-collection__item">
+    {% if content.field_teaser_image %}
     <img class="usa-collection__img" src="{{ file_url(node.field_teaser_image.entity.field_media_image.entity.fileuri) }}" alt="{{ node.field_teaser_image.entity.field_media_image.entity.alt }}">
+    {% endif %}
     <div class="usa-collection__body">
+      {% if content.field_date %}
       <div class="usa-collection__meta" aria-label="More information">
         <div class="usa-collection__meta-item">
           {{ content.field_date }}
         </div>
       </div>
+      {% endif %}
       {{ title_prefix }}
       {% if not page %}
         <h3{{ title_attributes.addClass(classes, 'usa-collection__heading') }}>
@@ -109,11 +113,15 @@
         {% if not node.isPublished() %}
         <mark class="unpublished">{{ 'Unpublished'|trans }}</mark>
         {% endif %}
+        {% if content.field_teaser_content %}
         <p class="usa-collection__description">{{ content.field_teaser_content }}</p>
+        {% endif %}
+        {%  if content.field_article_type or content.field_tags %}
         <div class="usa-collection__meta" aria-label="Topics">
           {{ content.field_article_type }}
           {{ content.field_tags }}
         </div>
+        {% endif %}
       </div>
 
     </div>
