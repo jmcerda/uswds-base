@@ -54,12 +54,11 @@
   ]
 %}
 
-{% if content.field_border.value %}
-  {% set card_classes = card_classes | merge[('usa-card--header-first')] %}
-{% endif %}
-
 <ul{{ attributes.addClass(classes, 'field__items') }}>
   {% for item in items %}
+    {% if paragraph.field_border.value %}
+      {% set card_classes = card_classes | merge[('usa-card--header-first')] %}
+    {% endif %}
     <li{{ item.attributes.addClass(card_classes, 'field__item') }}>{{ item.content }}</li>
   {% endfor %}
 </ul>
