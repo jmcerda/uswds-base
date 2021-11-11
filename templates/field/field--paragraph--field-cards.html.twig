@@ -53,6 +53,11 @@
     element['#object'].field_column_layout.value,
   ]
 %}
+
+{% if content.field_border.0.value %}
+  {% set card_classes = card_classes|push('usa-card--header-first') %}
+{% endif %}
+
 <ul{{ attributes.addClass(classes, 'field__items') }}>
   {% for item in items %}
     <li{{ item.attributes.addClass(card_classes, 'field__item') }}>{{ item.content }}</li>
