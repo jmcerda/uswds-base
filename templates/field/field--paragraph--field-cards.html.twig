@@ -56,7 +56,8 @@
 
 <ul{{ attributes.addClass(classes, 'field__items') }}>
   {% for item in items %}
-    {% if paragraph.field_standard_layout_options.0.value = 'media_header_first' %}
+    {% dump('field_standard_layout_options') %}
+    {% if paragraph.field_standard_layout_options.0.value == 'media_header_first' %}
       {% set card_classes = card_classes | merge[('usa-card--header-first')] %}
     {% endif %}
     <li{{ item.attributes.addClass(card_classes, 'field__item') }}>{{ item.content }}</li>
