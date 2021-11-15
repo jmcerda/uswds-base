@@ -33,7 +33,7 @@
             {% endif %}
             {% if footer_agency_name %}
               <div class="mobile-lg:grid-col-auto">
-                <p class="usa-footer__logo-heading">{{ footer_agency_name }}</p>
+                <p class="usa-footer__logo-heading">{{ footer_agency_name | raw }}</p>
               </div>
             {% endif %}
           </div>
@@ -73,7 +73,7 @@
           {% endif %}
           {% if footer_contact or contact_center %}
             {% if contact_center %}
-              <h3 class="usa-footer__contact-heading">{{ contact_center }}</h3>
+              <h3 class="usa-footer__contact-heading">{{ contact_center | raw }}</h3>
             {% endif %}
             <address class="usa-footer__address">
               <div class="usa-footer__contact-info grid-row grid-gap">
