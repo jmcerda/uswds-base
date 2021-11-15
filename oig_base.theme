@@ -72,7 +72,7 @@ function oig_base_form_entity_browser_browse_content_form_alter(&$form, FormStat
  * Implements hook__theme_suggestions_HOOK_alter().
  */
 function oig_base_theme_suggestions_item_list_alter(&$suggestions, $variables) {
-  if (isset ($variables["items"][0]["#theme"])) {
+  if (isset($variables['items'][0]) && is_array($variables['items'][0]) && isset($variables['items'][0]['#theme'])) {
     $suggestions[] = 'item_list__' . str_replace('-', '_', $variables["items"][0]["#theme"]);
   }
 }
