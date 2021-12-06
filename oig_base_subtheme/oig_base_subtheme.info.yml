@@ -5,15 +5,16 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 base theme: oig_base
 
-# The following overrides will work if css is compiled to the root, update if different.
-libraries:
-  - oig_base_subtheme/oig_base_subtheme
+# Custom library
+#libraries:
+#  oig_base_subtheme: oig_base_subtheme
 
+# The following overrides will work if css is compiled to the root, update if different.
 libraries-override:
   oig_base/oig_base:
     css:
       theme:
-        assets/css/styles.css: false
+        assets/css/styles.css: assets/css/styles.css
 
 # Add the CSS to CKEditor, so that custom entries in "Style" will work.
 ckeditor_stylesheets:

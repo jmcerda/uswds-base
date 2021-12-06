@@ -1,8 +1,4 @@
 oig_base_subtheme:
   version: 1.0
-  css:
-    theme:
-      assets/css/styles.css: {}
   js:
     assets/js/custom.js: {}
-
