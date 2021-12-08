@@ -56,6 +56,7 @@
 
 <ul{{ attributes.addClass(classes, 'field__items') }}>
   {% for item in items %}
+  {% set media_classes = card_classes %}
     {% if paragraph.field_standard_layout_options.0.value == 'media_header_first' %}
       {% set media_classes = card_classes | merge[('usa-card--header-first')] %}
     {% endif %}
