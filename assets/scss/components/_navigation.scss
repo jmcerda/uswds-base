@@ -80,3 +80,13 @@ nav.usa-nav {
     margin: -.75rem -.5rem -1rem auto;
   }
 }
+
+// Legal nav position.
+.region-footer-secondary {
+  margin-top: 2em;
+  nav.menu--secondary-footer {
+    ul.menu {
+      text-align: center;
+    }
+  }
+}
