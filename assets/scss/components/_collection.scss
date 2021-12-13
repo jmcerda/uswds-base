@@ -3,6 +3,18 @@
     margin-bottom: 1em;
     .usa-collection__meta {
       display: flex;
+      .field--name-field-report-number {
+        .field__label, .field__item {
+          display: inline-flex;
+        }
+      }
     }
   }
+}
+
+// Collection image styles.
+.usa-collection__img img {
+  width: 100%;
+  height: auto;
+  image-rendering: high-quality;
 }
