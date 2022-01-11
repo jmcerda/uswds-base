@@ -2,6 +2,13 @@ footer {
   //.usa-footer__contact-info {
   //  font-size: 1.25rem !important;
   //}
+  .usa-footer__primary-content {
+    li.usa-footer__secondary-link {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
   .usa-footer__secondary-section {
     nav {
       ul {
