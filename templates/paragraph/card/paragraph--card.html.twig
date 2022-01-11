@@ -4,6 +4,7 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     'usa-card__container',
+    'text-' ~ {{ paragraph.field_alignment.0.value }},
   ]
 %}
 {%
@@ -13,6 +14,7 @@
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     'usa-card__container',
     'usa-card__container__borderless',
+    'text-' ~ {{ paragraph.field_alignment.0.value }},
   ]
 %}
 {% block paragraph %}
