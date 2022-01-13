@@ -118,7 +118,7 @@
         </div>
         <p class="usa-collection__description">{{ content.body }}</p>
         <div class="usa-collection__meta" aria-label="Topics">
-          {{ content|without ('field_publication_date', 'field_report_number', 'body') }}
+          {{ content|without ('field_publication_date', 'field_report_number', 'body', 'field_media_reference') }}
         </div>
       </div>
 
