@@ -77,8 +77,8 @@
 {% endif %}
 <article{{ attributes.addClass('width-full') }}>
   <div class="usa-collection__item">
-    {% if node.field_media_reference.entity.field_media_image.entity.fileuri %}
-      <img class="usa-collection__img" src="{{ file_url(node.field_media_reference.entity.field_media_image.entity.fileuri) }}" alt="{{ node.field_teaser_image.entity.field_media_image.entity.alt }}">
+    {% if node.field_teaser_image.entity.field_media_image.entity.fileuri %}
+      <img class="usa-collection__img" src="{{ file_url(node.field_teaser_image.entity.field_media_image.entity.fileuri) }}" alt="{{ node.field_teaser_image.entity.field_media_image.entity.alt }}">
     {% endif %}
     <div class="usa-collection__body">
       <div class="usa-collection__meta" aria-label="More information">
@@ -118,7 +118,7 @@
         </div>
         <p class="usa-collection__description">{{ content.body }}</p>
         <div class="usa-collection__meta" aria-label="Topics">
-          {{ content|without ('field_publication_date', 'field_report_number', 'body', 'field_media_reference') }}
+          {{ content|without ('field_publication_date', 'field_report_number', 'body', 'field_teaser_image') }}
         </div>
       </div>
 
