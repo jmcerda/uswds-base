@@ -81,7 +81,9 @@
     {{ title_prefix }}
     {% if not page %}
       <h3{{ title_attributes.addClass(classes, 'usa-collection__heading') }}>
-        <a class="usa-link" href="{{ url }}" rel="bookmark">{{ field_job_title }}</a><br>
+        <a class="usa-link" href="{{ url }}" rel="bookmark">{{ field_job_title }}</a>
+      </h3>
+      <h3{{ title_attributes.addClass(classes, 'usa-collection__heading') }}>
         <a class="usa-link" href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h3>
     {% endif %}
