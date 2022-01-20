@@ -4,3 +4,12 @@ main.usa-section {
 .usa-footer__primary-section {
   padding-bottom: 4rem;
 }
+
+.field--name-field-content {
+  > .field__item {
+    > .paragraph {
+      margin-top: 0;
+    }
+  }
+}
+
