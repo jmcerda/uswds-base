@@ -6,7 +6,7 @@ main.usa-section {
 }
 
 .field--name-field-content {
-  > .field__item {
+  > .field__item:first-child {
     > .paragraph {
       margin-top: 0;
     }
