@@ -8,9 +8,9 @@
 <div class="tweet usa-collection__body">
   <div class="usa-collection__description">{{ text }}</div>
   <ul class="usa-collection__meta">
-    <li class="usa-collection__meta-item usa-tag">
+    <li class="usa-collection__meta-item">
       <a href="{{ avatar.url }}" style="text-decoration: none;">@{{ avatar.screen_name }}</a>
     </li>
-    <br><em>- <time class="timeago" datetime="{{ date.stamp }}">{{ date.clean }}</time></em>
   </ul>
+  <em>- <time class="timeago" datetime="{{ date.stamp }}">{{ date.clean }}</time></em>
 </div>
