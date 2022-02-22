@@ -1,0 +1,33 @@
+// Global USWDS Fixes per - https://www.drupal.org/docs/contributed-themes/uswds-base/css-drupal-fix-list
+// ------------------------------------------------------------------------------------------------------
+/*
+
+EXAMPLE: add asterisk to any required field on a form, optionally add color
+
+*/
+.form-required::after {
+  display: inline-block;
+  margin-right: 0.15em;
+  margin-left: 0.15em;
+  content: "*";
+  color: #d72222;  //optional: add a red color
+}
+
+/*
+
+EXAMPLE: Add missing style to existing built-in class "focusable" 
+To make skip links, for instance, visible on focus
+
+*/
+body a.usa-sr-only.focusable {
+  background: #1e384b;
+  color: #fff;
+  left: 50%;
+  padding: .5rem 1rem;
+  position: absolute;
+  transform: translateY(-100%);
+}
+
+body a.usa-sr-only.focusable:focus {
+    transform: translateY(0%)
+ }
