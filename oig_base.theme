@@ -40,8 +40,9 @@ function oig_base_form_views_exposed_form_alter(&$form, FormStateInterface $form
     $form['keys']['#label_attributes']['class'][] = 'usa-sr-only';
     // Add a unique ID for the search input.
     $form['keys']['#attributes']['id'] = "edit-search-keys";
-    // Add add SR label and aria-label.
-    $form['actions']['submit']['#prefix'] = '<span class="usa-sr-only">Search</span>';
+    // Get image directory.
+    $image_directory = drupal_get_path('theme', 'oig_base') . '/assets/img';
+    $form['actions']['submit']['#prefix'] = '<img src="'. $image_directory . ' /usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search">';
     $form['actions']['submit']['#attributes']['aria-label'] = 'Submit Search';
     // Unique ID for actions.
     $form['actions']['#attributes']['id'] = "search-actions";
