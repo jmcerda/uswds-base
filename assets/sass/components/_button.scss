@@ -4,16 +4,18 @@ button#report-abuse-button {
 }
 
 // Social buttons
-// .usa-social-link {
-//   height: 3rem;
-//   width: 3rem;
-//   background-position: center center;
-//   background-size: auto 1.5rem;
-//   background-color: transparent;
-//   display: inline-block;
-//   transition: all .2s ease-in-out;
-//   &:hover {
-//     transform: scale(1.03);
-//     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
-//   }
-// }
+.usa-social-link {
+  height: 2rem;
+  width: 2rem;
+  background-position: center center;
+  background-size: auto 1.5rem;
+  background-color: transparent;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24),
+      0 12px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: transparent;
+  }
+}
