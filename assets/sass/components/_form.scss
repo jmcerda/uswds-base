@@ -77,8 +77,8 @@ form.webform-submission-form {
 }
 
 // Webform spacing
-form {
+form.webform-submission-form {
   fieldset {
-    margin-bottom: 2em;
+    margin-bottom: 2em !important;
   }
 }
