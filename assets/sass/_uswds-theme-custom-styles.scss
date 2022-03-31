@@ -20,3 +20,6 @@ i.e.
 ----------------------------------------
 */
 @import "custom";
+// set links added in the WYSIWYG to have the same styling as class usa-link
+.usa-prose a,  .usa-prose a:link, .usa-prose a:visited {@include typeset-link;}
+.usa-prose a:hover, .usa-prose a:active {@include typeset-link;}
