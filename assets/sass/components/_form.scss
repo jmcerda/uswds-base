@@ -80,5 +80,8 @@ form.webform-submission-form {
 form.webform-submission-form {
   fieldset {
     margin-bottom: 2em;
+    .usa-form-group {
+      margin-bottom: 1em;
+    }
   }
 }
