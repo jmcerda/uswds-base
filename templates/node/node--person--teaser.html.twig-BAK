@@ -76,36 +76,28 @@
   {% set attributes = attributes.addClass('node--unpublished') %}
 {% endif %}
 <article{{ attributes.addClass('display-flex') }}>
-  <div class="usa-collection__item">
-    {% if content.field_teaser_image %}
-    <div class="usa-collection__img">
-      {{ content.field_teaser_image }}
-    </div>
+  {{ content.field_teaser_image }}
+  <div class="usa-collection__body">
+    {{ title_prefix }}
+    {% if not page %}
+      <h3{{ title_attributes.addClass(classes, 'usa-collection__heading') }}>
+        <a class="usa-link" href="{{ url }}" rel="bookmark">{{ content.field_job_title }}</a>
+      </h3>
+      <h4 class="margin-top-0">- {{ label }}</h4>
     {% endif %}
-    <div class="usa-collection__body">
-      {{ title_prefix }}
-      {% if not page %}
-        <h3{{ title_attributes.addClass(classes, 'usa-collection__heading') }}>
-          <a class="usa-link" href="{{ url }}" rel="bookmark">{{ content.field_job_title }}</a>
-        </h3>
-        <h4 class="margin-top-0">- {{ label }}</h4>
-      {% endif %}
-      {{ title_suffix }}
+    {{ title_suffix }}
 
-      {% if content.field_teaser_content %}
-        <p class="usa-collection__description">{{ content.field_teaser_content }}</p>
-      {% endif %}
+    {{ content|without('field_teaser_image', 'field_job_title') }}
 
-      {% if display_submitted %}
-        <footer>
-          {{ author_picture }}
-          <div{{ author_attributes }}>
-            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-            {{ metadata }}
-          </div>
-        </footer>
-      {% endif %}
-    </div>
+    {% if display_submitted %}
+      <footer>
+        {{ author_picture }}
+        <div{{ author_attributes }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {{ metadata }}
+        </div>
+      </footer>
+    {% endif %}
   </div>
   <div{{ content_attributes }}>
 
