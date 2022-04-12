@@ -45,7 +45,7 @@ function oig_base_form_views_exposed_form_alter(&$form, FormStateInterface $form
     //$form['actions']['submit']['#prefix'] = '<img src="'. $image_directory . '/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search">';
     $form['actions']['submit']['#attributes']['aria-label'] = 'Submit Search';
     $form['actions']['submit']['#uses_button_tag'] = TRUE;
-    $form['actions']['submit']['#type'] = 'button';
+    // $form['actions']['submit']['#type'] = 'button';
     // Unique ID for actions.
     $form['actions']['#attributes']['id'] = "search-actions";
     // Unique ID for search form submit.
