@@ -21,4 +21,6 @@ i.e.
 */
 @import "custom";
 // set links added in the WYSIWYG to have the same styling as class usa-link
-.usa-prose a {@include typeset-link;}
+.usa-prose a:not(.usa-button) {
+  @include typeset-link;
+}
