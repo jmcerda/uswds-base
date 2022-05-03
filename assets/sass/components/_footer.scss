@@ -13,20 +13,23 @@ footer {
     nav {
       ul {
         list-style-type: none;
-        li.usa-footer__secondary-link {
+        li {
           display: inline-flex;
           ::after {
             content: "  |  ";
           }
           a {
             text-decoration: none;
-            :visited {
-              color: $theme-color-primary;
-            }
           }
         }
+
         li:last-child ::after {
           content: "";
+        }
+      }
+      ul.usa-list {
+        li.usa-footer__secondary-link {
+          color: $theme-color-primary;
         }
       }
     }
