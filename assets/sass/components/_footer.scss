@@ -13,23 +13,25 @@ footer {
     nav {
       ul {
         list-style-type: none;
-        li {
+        li.usa-footer__secondary-link {
           display: inline-flex;
           ::after {
-            content: '  |  ';
+            content: "  |  ";
           }
           a {
             text-decoration: none;
+            :visited {
+              color: $theme-color-primary;
+            }
           }
         }
         li:last-child ::after {
-          content: '';
+          content: "";
         }
       }
     }
   }
 }
-
 
 // DOJ Styles for later
 //.usa-footer__contact-heading {
