@@ -27,13 +27,13 @@ footer {
           content: "";
         }
       }
-      ul.usa-list {
-        .usa-footer__secondary-link {
-          a:visited {
-            color: $theme-color-primary;
-          }
-        }
-      }
+      // ul.usa-list {
+      //   .usa-footer__secondary-link {
+      //     a:visited {
+      //       color: $theme-color-primary;
+      //     }
+      //   }
+      // }
     }
   }
 }
