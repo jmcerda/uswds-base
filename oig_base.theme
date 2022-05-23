@@ -28,6 +28,8 @@ function oig_base_preprocess_textarea(&$variables) {
 function oig_base_preprocess_form(&$variables) {
   if ($variables["attributes"]["id"] === "views-exposed-form-search-page-search") {
     $variables['attributes']['class'] = 'usa-search usa-search--small';
+    $variables['attributes']['role'] = 'search';
+    $variables['attributes']['aria-label'] = 'Sitewide search';
   }
 }
 
