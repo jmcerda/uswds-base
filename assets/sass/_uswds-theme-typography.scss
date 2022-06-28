@@ -37,7 +37,7 @@ Accepts true or false
 ----------------------------------------
 */
 
-$theme-respect-user-font-size: true;
+$theme-respect-user-font-size: true !default;
 
 // $theme-root-font-size only applies when
 // $theme-respect-user-font-size is set to
@@ -49,7 +49,7 @@ $theme-respect-user-font-size: true;
 
 // Accepts values in px
 
-$theme-root-font-size: 10px;
+$theme-root-font-size: 10px !default;
 
 /*
 ----------------------------------------
@@ -130,7 +130,7 @@ $theme-typeface-tokens: (
     display-name: "Example Sans Display Name",
     cap-height: 364px,
   ),
-);
+) !default;
 
 /*
 ----------------------------------------
@@ -194,12 +194,12 @@ font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans;
 ----------------------------------------
 */
 
-$theme-font-cond-custom-stack: false;
-$theme-font-icon-custom-stack: false;
-$theme-font-lang-custom-stack: false;
-$theme-font-mono-custom-stack: false;
-$theme-font-sans-custom-stack: false;
-$theme-font-serif-custom-stack: false;
+$theme-font-cond-custom-stack: false !default;
+$theme-font-icon-custom-stack: false !default;
+$theme-font-lang-custom-stack: false !default;
+$theme-font-mono-custom-stack: false !default;
+$theme-font-sans-custom-stack: false !default;
+$theme-font-serif-custom-stack: false !default;
 
 /*
 ----------------------------------------
@@ -259,12 +259,12 @@ $theme-font-serif-custom-src: (
 ----------------------------------------
 */
 
-$theme-font-cond-custom-src: false;
-$theme-font-icon-custom-src: false;
-$theme-font-lang-custom-src: false;
-$theme-font-mono-custom-src: false;
-$theme-font-sans-custom-src: false;
-$theme-font-serif-custom-src: false;
+$theme-font-cond-custom-src: false !default;
+$theme-font-icon-custom-src: false !default;
+$theme-font-lang-custom-src: false !default;
+$theme-font-mono-custom-src: false !default;
+$theme-font-sans-custom-src: false !default;
+$theme-font-serif-custom-src: false !default;
 
 /*
 ----------------------------------------
@@ -283,11 +283,11 @@ tokens.
 ----------------------------------------
 */
 
-$theme-font-role-ui: "sans";
-$theme-font-role-heading: "serif";
-$theme-font-role-body: "sans";
-$theme-font-role-code: "mono";
-$theme-font-role-alt: "serif";
+$theme-font-role-ui: "sans" !default;
+$theme-font-role-heading: "serif" !default;
+$theme-font-role-body: "sans" !default;
+$theme-font-role-code: "mono" !default;
+$theme-font-role-alt: "serif" !default;
 
 /*
 ----------------------------------------
@@ -399,24 +399,24 @@ $theme-body-line-height: 5;
 $theme-style-body-element: false;
 
 // Headings
-$theme-h1-font-size: "2xl";
-$theme-h2-font-size: "xl";
-$theme-h3-font-size: "lg";
-$theme-h4-font-size: "sm";
-$theme-h5-font-size: "xs";
-$theme-h6-font-size: "3xs";
-$theme-heading-line-height: 2;
-$theme-small-font-size: "2xs";
-$theme-display-font-size: "3xl";
+$theme-h1-font-size: "2xl" !default;
+$theme-h2-font-size: "xl" !default;
+$theme-h3-font-size: "lg" !default;
+$theme-h4-font-size: "sm" !default;
+$theme-h5-font-size: "xs" !default;
+$theme-h6-font-size: "3xs" !default;
+$theme-heading-line-height: 2 !default;
+$theme-small-font-size: "2xs" !default;
+$theme-display-font-size: "3xl" !default;
 
 // Text and prose
-$theme-text-measure-narrow: 1;
-$theme-text-measure: 4;
-$theme-text-measure-wide: 6;
-$theme-prose-font-family: "body";
+$theme-text-measure-narrow: 1 !default;
+$theme-text-measure: 4 !default;
+$theme-text-measure-wide: 6 !default;
+$theme-prose-font-family: "body" !default;
 
 // Lead text
-$theme-lead-font-family: "heading";
-$theme-lead-font-size: "lg";
-$theme-lead-line-height: 6;
-$theme-lead-measure: 6;
+$theme-lead-font-family: "heading" !default;
+$theme-lead-font-size: "lg" !default;
+$theme-lead-line-height: 6 !default;
+$theme-lead-measure: 6 !default;
