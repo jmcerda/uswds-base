@@ -131,11 +131,11 @@ General colors
 */
 
 // Body
-$theme-body-background-color: "white";
+$theme-body-background-color: "white" !default;
 
 // Text
-$theme-text-color: "ink";
-$theme-text-reverse-color: "white";
+$theme-text-color: "ink" !default;
+$theme-text-reverse-color: "white" !default;
 
 // Links
 $theme-link-color: "primary" !default;
