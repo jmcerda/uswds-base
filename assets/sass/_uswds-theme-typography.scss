@@ -300,15 +300,15 @@ values from the USWDS system type scale
 ----------------------------------------
 */
 
-$theme-type-scale-3xs: 2;
-$theme-type-scale-2xs: 3;
-$theme-type-scale-xs: 4;
-$theme-type-scale-sm: 5;
-$theme-type-scale-md: 6;
-$theme-type-scale-lg: 9;
-$theme-type-scale-xl: 12;
-$theme-type-scale-2xl: 14;
-$theme-type-scale-3xl: 15;
+$theme-type-scale-3xs: 2 !default;
+$theme-type-scale-2xs: 3 !default;
+$theme-type-scale-xs: 4 !default;
+$theme-type-scale-sm: 5 !default;
+$theme-type-scale-md: 6 !default;
+$theme-type-scale-lg: 9 !default;
+$theme-type-scale-xl: 12 !default;
+$theme-type-scale-2xl: 14 !default;
+$theme-type-scale-3xl: 15 !default;
 
 /*
 ----------------------------------------
@@ -319,19 +319,19 @@ Or use `false` for unneeded weights.
 ----------------------------------------
 */
 
-$theme-font-weight-thin: false;
-$theme-font-weight-light: 300;
-$theme-font-weight-normal: 400;
-$theme-font-weight-medium: false;
-$theme-font-weight-semibold: false;
-$theme-font-weight-bold: 700;
-$theme-font-weight-heavy: false;
+$theme-font-weight-thin: false !default;
+$theme-font-weight-light: 300 !default;
+$theme-font-weight-normal: 400 !default;
+$theme-font-weight-medium: false !default;
+$theme-font-weight-semibold: false !default;
+$theme-font-weight-bold: 700 !default;
+$theme-font-weight-heavy: false !default;
 
 // If USWDS is generating your @font-face rules,
 // should we generate all available weights
 // regardless of the assignments above?
 
-$theme-generate-all-weights: false;
+$theme-generate-all-weights: false !default;
 
 /*
 ----------------------------------------
@@ -391,12 +391,12 @@ none:    none
 */
 
 // Body settings are the equivalent of setting the <body> element
-$theme-body-font-family: "body";
-$theme-body-font-size: "sm";
-$theme-body-line-height: 5;
+$theme-body-font-family: "body" !default;
+$theme-body-font-size: "sm" !default;
+$theme-body-line-height: 5 !default;
 
 // If true, explicitly style the <body> element with the base styles
-$theme-style-body-element: false;
+$theme-style-body-element: false !default;
 
 // Headings
 $theme-h1-font-size: "2xl" !default;
