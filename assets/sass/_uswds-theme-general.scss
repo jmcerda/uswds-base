@@ -56,7 +56,7 @@ $theme-namespace: (
     namespace: "u-",
     output: false,
   ),
-);
+)!default;
 
 /*
 ----------------------------------------
@@ -72,7 +72,7 @@ escaped.
 ----------------------------------------
 */
 
-$theme-prefix-separator: "\\:";
+$theme-prefix-separator: "\\:" !default;
 
 /*
 ----------------------------------------
@@ -83,7 +83,7 @@ with !important
 ----------------------------------------
 */
 
-$theme-layout-grid-use-important: false;
+$theme-layout-grid-use-important: false !default;
 
 /*
 ----------------------------------------
@@ -95,7 +95,7 @@ property of all site elements to
 ----------------------------------------
 */
 
-$theme-global-border-box-sizing: true;
+$theme-global-border-box-sizing: true !default;
 
 /*
 ----------------------------------------
@@ -103,10 +103,10 @@ Focus styles
 ----------------------------------------
 */
 
-$theme-focus-color: "blue-40v";
-$theme-focus-offset: 0;
-$theme-focus-style: solid;
-$theme-focus-width: 0.5;
+$theme-focus-color: "blue-40v" !default;
+$theme-focus-offset: 0 !default;
+$theme-focus-style: solid !default;
+$theme-focus-width: 0.5 !default;
 
 /*
 ----------------------------------------
@@ -114,4 +114,4 @@ Icons
 ----------------------------------------
 */
 
-$theme-icon-image-size: 2;
+$theme-icon-image-size: 2 !default;
