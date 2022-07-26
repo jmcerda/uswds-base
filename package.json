@@ -1,6 +1,6 @@
 {
   "name": "oig_base",
-  "version": "1.0.0",
+  "version": "3.2.3",
   "devDependencies": {
     "@swc/core": "^1.2.152",
     "@swc/wasm": "^1.2.152",
