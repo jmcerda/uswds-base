@@ -12,10 +12,6 @@ libraries:
 libraries-override:
   uswds/uswds: false
 
-# Add the CSS to CKEditor, so that custom entries in "Style" will work.
-ckeditor_stylesheets:
-  - assets/css/styles.css
-
 regions:
   header_top: 'Above Header'
   header: 'Header'
