@@ -1,5 +1,5 @@
 {
-    "name": "drupal/uswds_base",
+    "name": "jmcerda/uswds_base",
     "description": "Subtheme of USWDS Framework with base configuration including paragraph types for USWDS components.",
     "type": "drupal-theme",
     "license": "GPL-2.0-only",
