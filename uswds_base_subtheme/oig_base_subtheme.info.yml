@@ -1,16 +1,24 @@
-name: OIG Base
+name: USWDS Base Subtheme
 type: theme
-description: 'A subtheme of USWDS for OIG Template.'
+description: 'A subtheme of the USWDS Base theme using USWDS-gulp.'
 core: 8.x
 core_version_requirement: ^8 || ^9
-base theme: uswds
+base theme: uswds_base
 
-libraries:
-  - oig_base/oig_base
+# Custom library
+#libraries:
+#  uswds_base_subtheme: uswds_base_subtheme
 
 # The following overrides will work if css is compiled to the root, update if different.
 libraries-override:
-  uswds/uswds: false
+  uswds_base/uswds_base:
+    css:
+      theme:
+        assets/css/styles.css: assets/css/styles.css
+
+# Add the CSS to CKEditor, so that custom entries in "Style" will work.
+ckeditor_stylesheets:
+  - assets/css/styles.css
 
 regions:
   header_top: 'Above Header'

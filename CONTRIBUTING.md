@@ -1,4 +1,4 @@
-# OIG Base theme
+# USWDS Base theme
 
 ## Theme Resources:
 U.S. Web Design System (USWDS) - https://designsystem.digital.gov/

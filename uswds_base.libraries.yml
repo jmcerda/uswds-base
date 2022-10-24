@@ -1,4 +1,4 @@
-oig_base:
+uswds_base:
   version: VERSION
   css:
     theme:

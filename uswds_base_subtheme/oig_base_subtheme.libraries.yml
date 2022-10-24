@@ -1,4 +1,4 @@
-oig_base_subtheme:
+uswds_base_subtheme:
   version: 1.0
   js:
     assets/js/custom.js: {}

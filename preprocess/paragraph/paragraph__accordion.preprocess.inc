@@ -3,7 +3,7 @@
 /**
  * Implements hook_preprocess_paragraph__accordion().
  */
-function oig_base_preprocess_paragraph__accordion(&$variables) {
+function uswds_base_preprocess_paragraph__accordion(&$variables) {
   $variables['attributes']['class'][] = 'usa-accordion';
   $variables['attributes']['class'][] = 'usa-section';
 

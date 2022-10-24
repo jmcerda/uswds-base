@@ -3,7 +3,7 @@
 /**
  * Implements hook_preprocess_node().
  */
-function oig_base_preprocess_node (&$variables) {
+function uswds_base_preprocess_node (&$variables) {
   $node = $variables['node'];
 
   if ($node->bundle() == 'recommendation') {

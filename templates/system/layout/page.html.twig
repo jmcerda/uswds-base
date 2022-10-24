@@ -28,7 +28,7 @@
 
       <nav aria-label="Primary navigation" class="usa-nav" role="navigation">
         <button class="usa-nav__close">
-          <img src="{{ oig_base_theme_path }}/assets/img/close.svg" alt="close"/>
+          <img src="{{ uswds_base_theme_path }}/assets/img/close.svg" alt="close"/>
         </button>
         {% if header_extended %}
           <div class="usa-nav__inner">
@@ -108,10 +108,10 @@
 {#    <a href="#">Return to top</a>#}
 {#  </div>#}
   {% if footer_slim %}
-    {% include '@oig_base/includes/slim-footer.html.twig' %}
+    {% include '@uswds_base/includes/slim-footer.html.twig' %}
   {% elseif footer_medium %}
-    {% include '@oig_base/includes/medium-footer.html.twig' %}
+    {% include '@uswds_base/includes/medium-footer.html.twig' %}
   {% else %}
-    {% include '@oig_base/includes/big-footer.html.twig' %}
+    {% include '@uswds_base/includes/big-footer.html.twig' %}
   {% endif %}
 </footer>

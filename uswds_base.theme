@@ -2,7 +2,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 
-//function oig_base_preprocess_page_title(&$variables) {
+//function uswds_base_preprocess_page_title(&$variables) {
 //  $node = \Drupal::routeMatch()->getParameter('node');
 //  if ($node instanceof \Drupal\node\Entity\Node && $node->bundle() === 'report'
 //    && !$node->get('field_report_title')->isEmpty()) {
@@ -11,30 +11,30 @@ use Drupal\Core\Form\FormStateInterface;
 //}
 
 /*
- * Created a new TWIG variables {{ oig_base_theme_path }} and {{ oig_base_theme_img_path }} to be used globally
+ * Created a new TWIG variables {{ uswds_base_theme_path }} and {{ uswds_base_theme_img_path }} to be used globally
 */
-function oig_base_preprocess(&$variables) {
+function uswds_base_preprocess(&$variables) {
   // Set the path to the base theme.
-  $variables['oig_base_theme_path'] = base_path() . drupal_get_path('theme', 'oig_base');
-  $variables['oig_base_theme_img_path'] = base_path() . drupal_get_path('theme', 'oig_base') . '/assets/img';
+  $variables['uswds_base_theme_path'] = base_path() . drupal_get_path('theme', 'uswds_base');
+  $variables['uswds_base_theme_img_path'] = base_path() . drupal_get_path('theme', 'uswds_base') . '/assets/img';
 }
 
-function oig_base_preprocess_input__email(&$variables) {
+function uswds_base_preprocess_input__email(&$variables) {
   $variables['attributes']['class'][] = 'usa-input';
 }
 
-function oig_base_preprocess_input__tel(&$variables) {
+function uswds_base_preprocess_input__tel(&$variables) {
  $variables['attributes']['class'][] = 'usa-input';
 }
 
-function oig_base_preprocess_textarea(&$variables) {
+function uswds_base_preprocess_textarea(&$variables) {
  $variables['attributes']['class'][] = 'usa-textarea';
 }
 
 /**
  * Implements template_preprocess_form().
  */
-function oig_base_preprocess_form(&$variables) {
+function uswds_base_preprocess_form(&$variables) {
   if ($variables["attributes"]["id"] === "views-exposed-form-search-page-search") {
     $variables['attributes']['class'] = 'usa-search usa-search--small';
     $variables['attributes']['role'] = 'search';
@@ -45,14 +45,14 @@ function oig_base_preprocess_form(&$variables) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function oig_base_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function uswds_base_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   if ($form["#id"] === "views-exposed-form-search-page-search") {
     unset($form['keys']['#size']);
     $form['keys']['#label_attributes']['class'][] = 'usa-sr-only';
     // Add a unique ID for the search input.
     $form['keys']['#attributes']['id'] = "edit-search-keys";
     // Get image directory.
-    $image_directory = drupal_get_path('theme', 'oig_base') . '/assets/img';
+    $image_directory = drupal_get_path('theme', 'uswds_base') . '/assets/img';
     //$form['actions']['submit']['#prefix'] = '<img src="'. $image_directory . '/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search">';
     $form['actions']['submit']['#attributes']['aria-label'] = 'Submit Search';
     $form['actions']['submit']['#uses_button_tag'] = TRUE;
@@ -66,7 +66,7 @@ function oig_base_form_views_exposed_form_alter(&$form, FormStateInterface $form
   };
 }
 
-function oig_base_form_entity_browser_browse_content_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+function uswds_base_form_entity_browser_browse_content_form_alter(&$form, FormStateInterface $form_state, $form_id) {
     $classes = $form['#attributes']['class'];
     $classes = array_filter($classes , function($e){
       return $e != 'usa-form';
@@ -77,7 +77,7 @@ function oig_base_form_entity_browser_browse_content_form_alter(&$form, FormStat
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function oig_base_theme_suggestions_alter(array &$suggestions, array $variables) {
+function uswds_base_theme_suggestions_alter(array &$suggestions, array $variables) {
   if (isset($variables['element']['#entity_type'])) {
     $element = $variables['element'];
     if ($element['#entity_type'] === "node" && array_key_exists('#view_mode', $element)){
@@ -89,7 +89,7 @@ function oig_base_theme_suggestions_alter(array &$suggestions, array $variables)
 /**
  * Implements hook__theme_suggestions_HOOK_alter().
  */
-function oig_base_theme_suggestions_item_list_alter(&$suggestions, $variables) {
+function uswds_base_theme_suggestions_item_list_alter(&$suggestions, $variables) {
   if (isset($variables['items'][0]) && is_array($variables['items'][0]) && isset($variables['items'][0]['#theme'])) {
     $suggestions[] = 'item_list__' . str_replace('-', '_', $variables["items"][0]["#theme"]);
   }

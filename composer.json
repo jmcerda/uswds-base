@@ -1,12 +1,14 @@
 {
-    "name": "uspsoig/oig_base",
-    "description": "Subtheme of USWDS Framework for OIG Template",
+    "name": "drupal/uswds_base",
+    "description": "Subtheme of USWDS Framework with base configuration including paragraph types for USWDS components.",
     "type": "drupal-theme",
     "license": "GPL-2.0-only",
     "authors": [
         {
             "name": "Jeremy Michael Cerda",
-            "role": "Web Architect"
+            "email": "jmcerda03@protonmail.ch",
+            "homepage": "https://www.wilkesliberty.com",
+            "role": "Developer"
         }
     ],
     "require": {
