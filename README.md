@@ -18,5 +18,4 @@ Modify the .info.yml file as needed.
 
 Enable this theme in the usual way (eg, drush en my_renamed_subtheme).
 
-To set up the Gulp workflow, follow the directions in /uswds_base_subtheme/README.md
-.
+To set up the Gulp workflow, follow the directions in /uswds_base_subtheme/README.md.

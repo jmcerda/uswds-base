@@ -12,10 +12,10 @@
         }
     ],
     "require": {
-        "bower-asset/matchheight": "^0.7.2",
-        "npm-asset/fitty": "^2.3"
+        "npm-asset/aos": "^2.3",
+        "npm-asset/fitty": "^2.3",
+        "npm-asset/matchheight": "^0.1.2"
     },
-    "require-dev": {},
     "config": {
         "sort-packages": true
     },

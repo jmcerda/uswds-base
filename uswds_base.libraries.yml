@@ -3,10 +3,12 @@ uswds_base:
   css:
     theme:
       assets/css/styles.css: {}
+      vendor/npm-asset/aos/dist/aos.css: {}
   js:
-    /libraries/matchheight/dist/jquery.matchHeight-min.js: {}
-    /libraries/fitty/dist/fitty.min.js: {}
-    assets/js/uswds.min.js: {}
     assets/js/custom.js: {}
     assets/js/fluidvids.js: { scope: footer }
-#    assets/js/ThatsNotYoChild.js: { scope: footer }
+    assets/js/uswds.min.js: {}
+    vendor/npm-asset/aos/dist/aos.js: {}
+    vendor/npm-asset/fitty/dist/fitty.min.js: {}
+    vendor/npm-asset/matchheight/dist/MatchHeight.min.js: {}
+    
